@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2tnx6dteb1h6"]
+
+[ext_resource type="Texture2D" uid="uid://chflvhm0glble" path="res://Art/Sprites/SplashAnim.png" id="1_qt18y"]
+[ext_resource type="Script" path="res://Scripts/Splash.gd" id="2_n47eu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cu4b"]
+atlas = ExtResource("1_qt18y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtlgf"]
+atlas = ExtResource("1_qt18y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxlde"]
+atlas = ExtResource("1_qt18y")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k07qb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cu4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtlgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxlde")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SplashAnim" type="AnimatedSprite2D"]
+position = Vector2(131, 84)
+sprite_frames = SubResource("SpriteFrames_k07qb")
+frame_progress = 0.205636
+speed_scale = 5.0
+script = ExtResource("2_n47eu")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

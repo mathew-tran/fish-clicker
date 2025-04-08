@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://lq2p2dxhm7r7"]
+
+[ext_resource type="Texture2D" uid="uid://mcnxhrnpmffy" path="res://Art/Sprites/Fish/Small.png" id="1_b0x67"]
+[ext_resource type="Script" path="res://Scripts/Fish.gd" id="1_bd4gt"]
+[ext_resource type="PackedScene" uid="uid://kabmds7dffp3" path="res://Prefabs/Activity.tscn" id="2_lxnhx"]
+[ext_resource type="PackedScene" uid="uid://c2tnx6dteb1h6" path="res://Prefabs/Splash.tscn" id="3_uukyq"]
+
+[sub_resource type="Animation" id="Animation_2srqr"]
+resource_name = "anim"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-4, 0), Vector2(4, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yja77"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1vj5r"]
+_data = {
+"RESET": SubResource("Animation_yja77"),
+"anim": SubResource("Animation_2srqr")
+}
+
+[node name="Fish" type="Node2D"]
+position = Vector2(139, 100)
+script = ExtResource("1_bd4gt")
+metadata/_edit_group_ = true
+
+[node name="FishSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_b0x67")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FishSprite"]
+libraries = {
+"": SubResource("AnimationLibrary_1vj5r")
+}
+speed_scale = 4.0
+
+[node name="SplashAnim" parent="." instance=ExtResource("3_uukyq")]
+visible = false
+position = Vector2(1, -7)
+scale = Vector2(0.5, 0.5)
+
+[node name="Activity" parent="." instance=ExtResource("2_lxnhx")]
+position = Vector2(0, 0)
+
+[node name="Area2D" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[connection signal="button_up" from="Area2D" to="." method="_on_area_2d_button_up"]
