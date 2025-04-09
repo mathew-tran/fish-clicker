@@ -3,6 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://cw6ts8ywxxs27" path="res://Art/Sprites/Rod.png" id="1_mecuj"]
 [ext_resource type="Script" path="res://Scripts/FishingRod.gd" id="2_ag8vk"]
 
+[sub_resource type="Animation" id="Animation_yl5eu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_hwtd0"]
 resource_name = "anim"
 loop_mode = 1
@@ -17,21 +32,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, -0.0872665, 0.0872665, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_yl5eu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f65s2"]
@@ -55,3 +55,7 @@ libraries = {
 "": SubResource("AnimationLibrary_f65s2")
 }
 speed_scale = 1.5
+
+[node name="Fishing Area" type="RayCast2D" parent="."]
+position = Vector2(16, 2)
+target_position = Vector2(0, 5)

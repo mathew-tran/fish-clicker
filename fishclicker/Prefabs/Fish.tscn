@@ -1,9 +1,25 @@
-[gd_scene load_steps=8 format=3 uid="uid://lq2p2dxhm7r7"]
+[gd_scene load_steps=9 format=3 uid="uid://lq2p2dxhm7r7"]
 
 [ext_resource type="Texture2D" uid="uid://mcnxhrnpmffy" path="res://Art/Sprites/Fish/Small.png" id="1_b0x67"]
 [ext_resource type="Script" path="res://Scripts/Fish.gd" id="1_bd4gt"]
 [ext_resource type="PackedScene" uid="uid://kabmds7dffp3" path="res://Prefabs/Activity.tscn" id="2_lxnhx"]
 [ext_resource type="PackedScene" uid="uid://c2tnx6dteb1h6" path="res://Prefabs/Splash.tscn" id="3_uukyq"]
+[ext_resource type="Texture2D" uid="uid://cthfkkaock6k" path="res://Art/Sprites/Fish/Detail/GoldFish.png" id="5_p83jl"]
+
+[sub_resource type="Animation" id="Animation_yja77"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_2srqr"]
 resource_name = "anim"
@@ -19,21 +35,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-4, 0), Vector2(4, 0), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_yja77"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1vj5r"]
@@ -71,4 +72,19 @@ offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
 
+[node name="DetailedFish" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_p83jl")
+script = ExtResource("1_bd4gt")
+
+[node name="RunAwayTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CompleteTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="animation_finished" from="FishSprite/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="button_up" from="Area2D" to="." method="_on_area_2d_button_up"]
+[connection signal="timeout" from="RunAwayTimer" to="." method="_on_run_away_timer_timeout"]
+[connection signal="timeout" from="CompleteTimer" to="." method="_on_complete_timer_timeout"]

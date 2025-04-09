@@ -3,6 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dnp7pxuamsmfn" path="res://Art/Sprites/InEditor/SpawnMarker.png" id="1_nxcqp"]
 [ext_resource type="Script" path="res://Scripts/SpawnMarker.gd" id="2_x8166"]
 
-[node name="SpawnMarker" type="Sprite2D"]
+[node name="SpawnMarker" type="Sprite2D" groups=["SpawnMarker"]]
 texture = ExtResource("1_nxcqp")
 script = ExtResource("2_x8166")
