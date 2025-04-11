@@ -7,7 +7,8 @@
 script = ExtResource("1_clxro")
 FishImage = ExtResource("1_mwbec")
 FishName = "Goldfish"
-FishSize = 0
-FishID = "P000"
+FishSize = 1
+FishID = "P001"
 Tugs = 3
 TimeLimit = 5.0
+Cost = 2

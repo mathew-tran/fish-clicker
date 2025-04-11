@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs6oynhlgroby"]
+
+[ext_resource type="Texture2D" uid="uid://b2xdh1xgrnr8j" path="res://Art/Ui/Money.png" id="1_h38pi"]
+[ext_resource type="Script" path="res://Scripts/UI/MoneyUI.gd" id="1_hrhlg"]
+
+[node name="MoneyUI" type="HBoxContainer"]
+offset_right = 48.0
+offset_bottom = 23.0
+theme_override_constants/separation = 0
+script = ExtResource("1_hrhlg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("1_h38pi")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "100"

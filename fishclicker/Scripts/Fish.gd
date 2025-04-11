@@ -15,12 +15,22 @@ var ClickAmount = 0
 signal Dead
 signal Caught
 
+var FishDataReference : FishData
+
+func _enter_tree():
+	scale = Vector2.ZERO
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "scale", Vector2.ONE, .3)
+
 func Setup(fishData : FishData):
 	ClickAmount = fishData.Tugs + randi_range(0, 3)
 	$RunAwayTimer.wait_time = fishData.TimeLimit + randf_range(1, 5)
 	$DetailedFish.texture = fishData.FishImage
+	FishDataReference = fishData
 	
 	match fishData.FishSize:
+		FishData.SIZE.EXTRA_SMALL:
+			$FishSprite.texture = load("res://Art/Sprites/Fish/ExtraSmall.png")
 		FishData.SIZE.SMALL:
 			$FishSprite.texture = load("res://Art/Sprites/Fish/Small.png")
 		FishData.SIZE.LARGE:
@@ -43,7 +53,12 @@ func _on_area_2d_button_up():
 				CurrentState = STATE.COMPLETE
 				$FishSprite/AnimationPlayer.stop()
 				$SplashAnim.stop()
+				$DetailedFish.scale = Vector2.ZERO
 				$DetailedFish.visible = true
+				var fishTween = get_tree().create_tween()
+				fishTween.tween_property($DetailedFish, "scale", Vector2.ONE, .1)
+				await fishTween.finished
+				Finder.GetGameManager().AddMoney(FishDataReference.Cost)
 				$SplashAnim.visible = false
 				$FishSprite.visible = false
 				$RunAwayTimer.stop()
@@ -59,6 +74,7 @@ func _on_run_away_timer_timeout():
 	
 func GetFishSprite():
 	return $FishSprite
+
 
 
 func _on_complete_timer_timeout():

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://duugweocsasug"]
+
+[ext_resource type="PackedScene" uid="uid://cs6oynhlgroby" path="res://Prefabs/UI/MoneyUI.tscn" id="1_ihkin"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_53om5"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GameManager" type="Node" parent="." groups=["GameManager"]]
+script = ExtResource("2_53om5")
+
+[node name="MoneyUI" parent="." instance=ExtResource("1_ihkin")]
