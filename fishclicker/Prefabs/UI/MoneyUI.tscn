@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cs6oynhlgroby"]
 
 [ext_resource type="Texture2D" uid="uid://b2xdh1xgrnr8j" path="res://Art/Ui/Money.png" id="1_h38pi"]
-[ext_resource type="Script" path="res://Scripts/UI/MoneyUI.gd" id="1_hrhlg"]
+[ext_resource type="Script" uid="uid://bg3vrglgbld1b" path="res://Scripts/UI/MoneyUI.gd" id="1_hrhlg"]
 
 [node name="MoneyUI" type="HBoxContainer"]
 offset_right = 48.0

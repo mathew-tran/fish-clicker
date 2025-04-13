@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dh11xq6bpg5aq" path="res://Prefabs/FishingRod.tscn" id="2_5uww4"]
 [ext_resource type="PackedScene" uid="uid://qdxgrfsmk8dm" path="res://Prefabs/SpawnMarker.tscn" id="3_4ctxt"]
 [ext_resource type="PackedScene" uid="uid://danivpwggton7" path="res://Prefabs/FishSpawner.tscn" id="5_q0kc4"]
-[ext_resource type="Script" path="res://Resources/FishData.gd" id="5_r6dp6"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="5_r6dp6"]
 [ext_resource type="Resource" uid="uid://byl4nrhgkmfeb" path="res://Resources/Levels/Pond/P001_GoldFish.tres" id="6_1muhm"]
 [ext_resource type="Resource" uid="uid://dgi7idvdqjjto" path="res://Resources/Levels/Pond/P002_BlueTang.tres" id="7_e7tr6"]
 [ext_resource type="Resource" uid="uid://bgub87y8wwqch" path="res://Resources/Levels/Pond/P003_JellyFish.tres" id="8_bg2hj"]

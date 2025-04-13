@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dh11xq6bpg5aq"]
 
 [ext_resource type="Texture2D" uid="uid://cw6ts8ywxxs27" path="res://Art/Sprites/Rod.png" id="1_mecuj"]
-[ext_resource type="Script" path="res://Scripts/FishingRod.gd" id="2_ag8vk"]
+[ext_resource type="Script" uid="uid://o2w8b1mrnfqg" path="res://Scripts/FishingRod.gd" id="2_ag8vk"]
 
 [sub_resource type="Animation" id="Animation_yl5eu"]
 length = 0.001
@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f65s2"]
 _data = {
-"RESET": SubResource("Animation_yl5eu"),
-"anim": SubResource("Animation_hwtd0")
+&"RESET": SubResource("Animation_yl5eu"),
+&"anim": SubResource("Animation_hwtd0")
 }
 
 [node name="FishingRod" type="Sprite2D" groups=["FishingRod"]]

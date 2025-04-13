@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://byl4nrhgkmfeb"]
 
-[ext_resource type="Script" path="res://Resources/FishData.gd" id="1_clxro"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="1_clxro"]
 [ext_resource type="Texture2D" uid="uid://cthfkkaock6k" path="res://Art/Sprites/Fish/Detail/GoldFish.png" id="1_mwbec"]
 
 [resource]

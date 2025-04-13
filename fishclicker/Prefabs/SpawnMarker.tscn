@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://qdxgrfsmk8dm"]
 
 [ext_resource type="Texture2D" uid="uid://dnp7pxuamsmfn" path="res://Art/Sprites/InEditor/SpawnMarker.png" id="1_nxcqp"]
-[ext_resource type="Script" path="res://Scripts/SpawnMarker.gd" id="2_x8166"]
+[ext_resource type="Script" uid="uid://bic8jji2bek2" path="res://Scripts/SpawnMarker.gd" id="2_x8166"]
 
 [node name="SpawnMarker" type="Sprite2D" groups=["SpawnMarker"]]
 texture = ExtResource("1_nxcqp")

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dgi7idvdqjjto"]
 
 [ext_resource type="Texture2D" uid="uid://bwvwr53baf6bi" path="res://Art/Sprites/Fish/Detail/BlueTang.png" id="1_xq5ce"]
-[ext_resource type="Script" path="res://Resources/FishData.gd" id="2_kgjxv"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_kgjxv"]
 
 [resource]
 script = ExtResource("2_kgjxv")

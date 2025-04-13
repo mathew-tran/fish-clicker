@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://kabmds7dffp3"]
 
 [ext_resource type="Texture2D" uid="uid://yk1jmkti0klr" path="res://Art/Sprites/Activity.png" id="1_46n3r"]
-[ext_resource type="Script" path="res://Scripts/Activity.gd" id="2_j4que"]
+[ext_resource type="Script" uid="uid://jxjtkjnq1xxv" path="res://Scripts/Activity.gd" id="2_j4que"]
 
 [sub_resource type="Animation" id="Animation_vl62f"]
 length = 0.001
@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ddm5o"]
 _data = {
-"RESET": SubResource("Animation_vl62f"),
-"pulsing": SubResource("Animation_lf52l")
+&"RESET": SubResource("Animation_vl62f"),
+&"pulsing": SubResource("Animation_lf52l")
 }
 
 [node name="Activity" type="Sprite2D"]

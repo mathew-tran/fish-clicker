@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://duugweocsasug"]
+[gd_scene load_steps=4 format=3 uid="uid://duugweocsasug"]
 
 [ext_resource type="PackedScene" uid="uid://cs6oynhlgroby" path="res://Prefabs/UI/MoneyUI.tscn" id="1_ihkin"]
-[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_53om5"]
+[ext_resource type="Script" uid="uid://dnb8y02qpiydw" path="res://Scripts/GameManager.gd" id="2_53om5"]
+[ext_resource type="PackedScene" uid="uid://bbbrrgy5kln12" path="res://Prefabs/UI/ShopUI.tscn" id="3_1hdpr"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -9,3 +10,5 @@
 script = ExtResource("2_53om5")
 
 [node name="MoneyUI" parent="." instance=ExtResource("1_ihkin")]
+
+[node name="ShopUI" parent="." instance=ExtResource("3_1hdpr")]
