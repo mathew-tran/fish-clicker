@@ -1,13 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bl5yukd27xnaw"]
+[gd_scene load_steps=8 format=3 uid="uid://bl5yukd27xnaw"]
 
 [ext_resource type="Texture2D" uid="uid://cmac1n1xjmu75" path="res://Art/Sprites/Environment.png" id="1_ucgu0"]
 [ext_resource type="PackedScene" uid="uid://dh11xq6bpg5aq" path="res://Prefabs/FishingRod.tscn" id="2_5uww4"]
 [ext_resource type="PackedScene" uid="uid://qdxgrfsmk8dm" path="res://Prefabs/SpawnMarker.tscn" id="3_4ctxt"]
 [ext_resource type="PackedScene" uid="uid://danivpwggton7" path="res://Prefabs/FishSpawner.tscn" id="5_q0kc4"]
-[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="5_r6dp6"]
-[ext_resource type="Resource" uid="uid://byl4nrhgkmfeb" path="res://Resources/Levels/Pond/P001_GoldFish.tres" id="6_1muhm"]
-[ext_resource type="Resource" uid="uid://dgi7idvdqjjto" path="res://Resources/Levels/Pond/P002_BlueTang.tres" id="7_e7tr6"]
-[ext_resource type="Resource" uid="uid://bgub87y8wwqch" path="res://Resources/Levels/Pond/P003_JellyFish.tres" id="8_bg2hj"]
 [ext_resource type="PackedScene" uid="uid://duugweocsasug" path="res://Prefabs/UI/PlayerUI.tscn" id="9_ra0ju"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eykgf"]
@@ -88,8 +84,5 @@ position = Vector2(100, 100)
 position = Vector2(115, 119)
 
 [node name="FishSpawner" parent="." instance=ExtResource("5_q0kc4")]
-CommonPool = Array[ExtResource("5_r6dp6")]([ExtResource("6_1muhm")])
-RarePool = Array[ExtResource("5_r6dp6")]([ExtResource("7_e7tr6")])
-LegendaryPool = Array[ExtResource("5_r6dp6")]([ExtResource("8_bg2hj")])
 
 [node name="CanvasLayer" parent="." instance=ExtResource("9_ra0ju")]
