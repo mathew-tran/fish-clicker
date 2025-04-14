@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl5yukd27xnaw"]
+[gd_scene load_steps=9 format=3 uid="uid://bl5yukd27xnaw"]
 
 [ext_resource type="Texture2D" uid="uid://cmac1n1xjmu75" path="res://Art/Sprites/Environment.png" id="1_ucgu0"]
+[ext_resource type="Script" uid="uid://dnb8y02qpiydw" path="res://Scripts/GameManager.gd" id="1_v1gob"]
 [ext_resource type="PackedScene" uid="uid://dh11xq6bpg5aq" path="res://Prefabs/FishingRod.tscn" id="2_5uww4"]
 [ext_resource type="PackedScene" uid="uid://qdxgrfsmk8dm" path="res://Prefabs/SpawnMarker.tscn" id="3_4ctxt"]
 [ext_resource type="PackedScene" uid="uid://danivpwggton7" path="res://Prefabs/FishSpawner.tscn" id="5_q0kc4"]
@@ -30,6 +31,9 @@ texture = ExtResource("1_ucgu0")
 sources/1 = SubResource("TileSetAtlasSource_eykgf")
 
 [node name="Node2D" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="." groups=["GameManager"]]
+script = ExtResource("1_v1gob")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_fj3y3")

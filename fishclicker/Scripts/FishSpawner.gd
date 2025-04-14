@@ -2,12 +2,16 @@ extends Node
 
 class_name FishSpawner
 
-@export var CurrentBait : BaitData
+var CurrentBait : BaitData
 
 func _ready():
+	Finder.GetGameManager().BaitChanged.connect(OnBaitChanged)
 	DetermineTime()
 	if CurrentBait == null:
 		CurrentBait = load("res://Resources/Levels/Baits/BAIT_NONE.tres")
+
+func OnBaitChanged(baitData):
+	CurrentBait = baitData
 	
 func DetermineTime():
 	$Timer.wait_time = randf_range(2, 4)

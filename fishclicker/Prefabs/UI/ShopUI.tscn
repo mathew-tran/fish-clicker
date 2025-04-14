@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbbrrgy5kln12"]
+[gd_scene load_steps=5 format=3 uid="uid://bbbrrgy5kln12"]
 
 [ext_resource type="PackedScene" uid="uid://c31b1is8yq1ur" path="res://Prefabs/UI/PurchaseBaitButton.tscn" id="1_2qmjl"]
+[ext_resource type="Script" uid="uid://bqprsj31oy6lm" path="res://Scripts/UI/ShopUI.gd" id="1_dl2q2"]
+[ext_resource type="Resource" uid="uid://ct5utnv2aas06" path="res://Resources/Levels/Baits/BAIT_SHRIMP.tres" id="2_s3n5v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qmjl"]
 bg_color = Color(0.0584206, 0.0584206, 0.0584206, 1)
 
 [node name="ShopUI" type="Popup"]
-size = Vector2i(197, 100)
+size = Vector2i(200, 100)
 visible = true
+script = ExtResource("1_dl2q2")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(200, 100)
@@ -38,5 +41,8 @@ offset_bottom = 10.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Shrimp Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
+BaitToSell = ExtResource("2_s3n5v")
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]

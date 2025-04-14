@@ -2,9 +2,13 @@ extends Resource
 
 class_name BaitData
 
+@export var BaitName = ""
+@export var BaitImage : Texture
+@export var Cost = 0
 @export var CommonPool : Array[FishData]
 @export var RarePool : Array[FishData]
 @export var LegendaryPool : Array[FishData]
+@export var bIsInfinite = false
 
 func GetRandomFish() -> FishData:
 	var result = randi() % 100
