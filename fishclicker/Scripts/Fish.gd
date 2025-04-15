@@ -27,6 +27,11 @@ func Setup(fishData : FishData):
 	$RunAwayTimer.wait_time = fishData.TimeLimit + randf_range(1, 5)
 	$DetailedFish.texture = fishData.FishImage
 	FishDataReference = fishData
+	FishDataReference.DetermineCondition()
+	var starsToShow = FishDataReference.Condition + 1
+	print(starsToShow)
+	for x in range(0, $DetailedFish/Rarity.get_child_count()):
+		$DetailedFish/Rarity.get_child(x).visible = x < starsToShow
 	
 	match fishData.FishSize:
 		FishData.SIZE.EXTRA_SMALL:
@@ -58,7 +63,7 @@ func _on_area_2d_button_up():
 				var fishTween = get_tree().create_tween()
 				fishTween.tween_property($DetailedFish, "scale", Vector2.ONE, .1)
 				await fishTween.finished
-				Finder.GetGameManager().AddMoney(FishDataReference.Cost)
+				FishDataReference.SellFish()
 				$SplashAnim.visible = false
 				$FishSprite.visible = false
 				$RunAwayTimer.stop()

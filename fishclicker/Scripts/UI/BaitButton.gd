@@ -29,7 +29,7 @@ func Update():
 	
 func _on_button_up() -> void:
 	if HasBait():
-		Finder.GetGameManager().BaitChanged.emit(OwnedBait)
+		Finder.GetGameManager().ChangeBait(OwnedBait)
 		Update()
 		Finder.GetPlayerUI().UpdateUI(PlayerUI.STATE.DEFAULT)
 		

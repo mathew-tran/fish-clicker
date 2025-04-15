@@ -6,3 +6,4 @@ func _ready():
 	
 func OnMoneyUpdate(amount):
 	$Label.text = str(amount)
+	$AnimationPlayer.play("anim")

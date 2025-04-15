@@ -2,16 +2,12 @@ extends Node
 
 class_name FishSpawner
 
-var CurrentBait : BaitData
 
+
+signal FishBite
 func _ready():
-	Finder.GetGameManager().BaitChanged.connect(OnBaitChanged)
 	DetermineTime()
-	if CurrentBait == null:
-		CurrentBait = load("res://Resources/Levels/Baits/BAIT_NONE.tres")
 
-func OnBaitChanged(baitData):
-	CurrentBait = baitData
 	
 func DetermineTime():
 	$Timer.wait_time = randf_range(2, 4)
@@ -27,11 +23,11 @@ func SpawnFish():
 	var newSpawn = Spawns[0].global_position
 	var fishInstance = load("res://Prefabs/Fish.tscn").instantiate() as Fish
 	fishInstance.global_position = newSpawn
-	fishInstance.Setup(CurrentBait.GetRandomFish())
+	fishInstance.Setup(Finder.GetGameManager().CurrentBait.GetRandomFish())
 	add_child(fishInstance)
 	fishInstance.Dead.connect(OnFishDead)
 	fishInstance.Caught.connect(OnFishCaught)
-
+	Finder.GetGameManager().UseCurrentBait()
 
 	
 func OnFishDead():

@@ -7,6 +7,7 @@ func _ready() -> void:
 	
 func OnBaitChanged(baitData):
 	Setup(baitData)
+	$AnimationPlayer.play("anim")
 	
 func Setup(bait : BaitData):
 	BaitRef = bait

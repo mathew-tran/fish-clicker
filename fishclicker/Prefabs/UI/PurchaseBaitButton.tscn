@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://c31b1is8yq1ur"]
 
-[ext_resource type="Texture2D" uid="uid://6741aa4kayh" path="res://Art/Sprites/Bait/ShrimpBait.png" id="1_3gwrk"]
 [ext_resource type="Script" uid="uid://dwqrvufhgbs1h" path="res://Scripts/UI/PurchaseBaitButton.gd" id="1_brl42"]
 [ext_resource type="Texture2D" uid="uid://b2xdh1xgrnr8j" path="res://Art/Ui/Money.png" id="2_brl42"]
 [ext_resource type="Resource" uid="uid://bb16lfrygisqc" path="res://Resources/Levels/Baits/BAIT_NONE.tres" id="2_xuaqq"]
+[ext_resource type="Texture2D" uid="uid://d07cgpr0enos" path="res://Art/Sprites/Bait/NoneBait.png" id="3_xuaqq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuaqq"]
 bg_color = Color(0.227451, 0.227451, 0.227451, 0.878431)
 
-[node name="Button" type="Button"]
+[node name="BAIT-None" type="Button"]
 custom_minimum_size = Vector2(20, 20)
 script = ExtResource("1_brl42")
 BaitToSell = ExtResource("2_xuaqq")
@@ -25,14 +25,14 @@ alignment = 1
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
-text = "Shrimp Bait"
+text = "None"
 horizontal_alignment = 1
 
 [node name="Image" type="TextureRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 mouse_filter = 2
-texture = ExtResource("1_3gwrk")
+texture = ExtResource("3_xuaqq")
 expand_mode = 2
 stretch_mode = 5
 
@@ -51,7 +51,7 @@ stretch_mode = 5
 [node name="Amount" type="Label" parent="VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-text = "20"
+text = "0"
 
 [node name="Owned" type="Label" parent="."]
 custom_minimum_size = Vector2(50, 0)
@@ -61,6 +61,7 @@ offset_top = 17.0
 offset_right = 58.0
 offset_bottom = 40.0
 scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 25
 text = "(0)"
 horizontal_alignment = 1
 
@@ -77,9 +78,11 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -20.0
+offset_top = 6.10352e-05
+offset_bottom = 20.0001
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "cannot afford"
 horizontal_alignment = 1
