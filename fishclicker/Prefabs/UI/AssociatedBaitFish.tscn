@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj2x6h1ikg8t2"]
+
+[ext_resource type="Script" uid="uid://dsfiiihpm4ttw" path="res://Scripts/UI/AssociatedBaitFish.gd" id="1_y42bo"]
+[ext_resource type="PackedScene" uid="uid://clv7ohkavdy51" path="res://Prefabs/UI/FishItem.tscn" id="2_xpn6f"]
+
+[node name="AssociatedBatiFish" type="Panel"]
+offset_right = 36.0
+offset_bottom = 52.0
+script = ExtResource("1_y42bo")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(20, 50)
+layout_mode = 0
+offset_top = 7.0
+offset_right = 71.0
+offset_bottom = 99.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Container" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="AssociatedFishItem" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 23.0
+scale = Vector2(0.3, 0.3)
+text = "FISH"
+horizontal_alignment = 1

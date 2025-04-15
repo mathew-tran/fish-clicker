@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://clv7ohkavdy51"]
+
+[ext_resource type="Script" uid="uid://d1suvxdgbpukw" path="res://Scripts/UI/FishItem.gd" id="1_11t5s"]
+[ext_resource type="Texture2D" uid="uid://cthfkkaock6k" path="res://Art/Sprites/Fish/Detail/GoldFish.png" id="1_i32tc"]
+
+[node name="AssociatedFishItem" type="Control"]
+custom_minimum_size = Vector2(20, 25)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_11t5s")
+
+[node name="Image" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("1_i32tc")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 105.0
+offset_bottom = 39.0
+scale = Vector2(0.2, 0.2)
+text = "???"
+horizontal_alignment = 1

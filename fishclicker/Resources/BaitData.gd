@@ -4,6 +4,7 @@ class_name BaitData
 
 @export var BaitName = ""
 @export var BaitImage : Texture
+@export var BaitID = "000"
 @export var Cost = 0
 @export var CommonPool : Array[FishData]
 @export var RarePool : Array[FishData]
@@ -21,3 +22,8 @@ func GetRandomFish() -> FishData:
 	LegendaryPool.shuffle()
 	return LegendaryPool[0]
 	
+func HasCompletedBait():
+	return Finder.GetGameManager().HasCompletedChallenge(BaitID)
+
+func CompleteBait():
+	return Finder.GetGameManager().AddCompletedChallenge(BaitID)

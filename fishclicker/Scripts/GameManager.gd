@@ -23,6 +23,12 @@ func _ready():
 	GameData["BaitInventory"] = {
 		
 	}
+	GameData["FishCaught"] = {
+		
+	}
+	GameData["BaitCompleted"] = {
+		
+	}
 	
 	await get_tree().process_frame
 	AddMoney(0)
@@ -42,7 +48,22 @@ func AddBait(baitName, amount = 1):
 		GameData["BaitInventory"][baitName] += amount
 	else:
 		GameData["BaitInventory"][baitName] = amount
-		
+
+func AddCompletedChallenge(baitID):
+	GameData["BaitCompleted"][baitID] = 1
+	
+func HasCompletedChallenge(baitID):
+	return GameData["BaitCompleted"].has(baitID)
+	
+func AddFish(fishID):
+	if GameData["FishCaught"].has(fishID):
+		GameData["FishCaught"][fishID] += 1
+	else:
+		GameData["FishCaught"][fishID] = 1
+
+func HasCaughtFish(fishID):
+	return GameData["FishCaught"].has(fishID)
+	
 func RemoveBait(baitName, amount = 1):
 	if GameData["BaitInventory"].has(baitName):
 			GameData["BaitInventory"][baitName] -= amount

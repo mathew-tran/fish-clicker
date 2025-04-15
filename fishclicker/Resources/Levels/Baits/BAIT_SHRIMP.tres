@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="BaitData" load_steps=7 format=3 uid="uid://ct5utnv2aas06"]
+[gd_resource type="Resource" script_class="BaitData" load_steps=8 format=3 uid="uid://ct5utnv2aas06"]
 
 [ext_resource type="Texture2D" uid="uid://6741aa4kayh" path="res://Art/Sprites/Bait/ShrimpBait.png" id="1_0fyk8"]
 [ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_txsd1"]
 [ext_resource type="Resource" uid="uid://byl4nrhgkmfeb" path="res://Resources/Levels/Fish/P001_GoldFish.tres" id="3_vt8jv"]
 [ext_resource type="Resource" uid="uid://bgub87y8wwqch" path="res://Resources/Levels/Fish/P003_JellyFish.tres" id="4_llca7"]
+[ext_resource type="Resource" uid="uid://clbjd8r0qxoms" path="res://Resources/Levels/Fish/P004_ClownFish.tres" id="5_txsd1"]
 [ext_resource type="Resource" uid="uid://dgi7idvdqjjto" path="res://Resources/Levels/Fish/P002_BlueTang.tres" id="5_uq1f1"]
 [ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="6_poms2"]
 
@@ -11,8 +12,9 @@
 script = ExtResource("6_poms2")
 BaitName = "Shrimp Bait"
 BaitImage = ExtResource("1_0fyk8")
+BaitID = "001"
 Cost = 3
-CommonPool = Array[ExtResource("2_txsd1")]([ExtResource("3_vt8jv")])
+CommonPool = Array[ExtResource("2_txsd1")]([ExtResource("3_vt8jv"), ExtResource("5_txsd1")])
 RarePool = Array[ExtResource("2_txsd1")]([ExtResource("5_uq1f1")])
 LegendaryPool = Array[ExtResource("2_txsd1")]([ExtResource("4_llca7")])
 bIsInfinite = false

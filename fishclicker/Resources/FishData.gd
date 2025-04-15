@@ -15,8 +15,15 @@ enum CONDITION {
 	EXCELLENT
 }
 
+enum RARITY {
+	COMMON,
+	RARE,
+	LEGENDARY
+}
+
 @export var FishImage : Texture
 @export var FishName = ""
+@export var Rarity : RARITY
 @export var FishSize : SIZE
 @export var FishID = "A000"
 @export var Tugs = 3
@@ -50,4 +57,9 @@ func SellFish():
 			amount *= 2.0
 			
 	amount = round(amount)
+	Finder.GetGameManager().AddFish(FishID)
 	Finder.GetGameManager().AddMoney(amount)
+
+
+func HasCaughtFish():
+	return Finder.GetGameManager().HasCaughtFish(FishID)

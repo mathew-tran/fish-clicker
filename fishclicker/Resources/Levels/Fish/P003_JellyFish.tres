@@ -7,6 +7,7 @@
 script = ExtResource("2_6ptyu")
 FishImage = ExtResource("1_44l0o")
 FishName = "Jelly Fish"
+Rarity = 2
 FishSize = 2
 FishID = "P003"
 Tugs = 3

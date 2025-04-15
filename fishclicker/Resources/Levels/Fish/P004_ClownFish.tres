@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://clbjd8r0qxoms"]
+
+[ext_resource type="Texture2D" uid="uid://5i2hed8qckbs" path="res://Art/Sprites/Fish/Detail/ClownFish.png" id="1_au4jd"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_pnri8"]
+
+[resource]
+script = ExtResource("2_pnri8")
+FishImage = ExtResource("1_au4jd")
+FishName = "Clown Fish"
+Rarity = 1
+FishSize = 0
+FishID = "P004"
+Tugs = 2
+TimeLimit = 1.0
+Cost = 36
