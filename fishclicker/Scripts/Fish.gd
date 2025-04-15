@@ -30,9 +30,11 @@ func Setup(fishData : FishData):
 	FishDataReference.DetermineCondition()
 	var starsToShow = FishDataReference.Condition + 1
 	print(starsToShow)
+	$DetailedFish/Rarity.visible = false
 	for x in range(0, $DetailedFish/Rarity.get_child_count()):
 		$DetailedFish/Rarity.get_child(x).visible = x < starsToShow
-	
+		$DetailedFish/Rarity.get_child(x).visible = x < starsToShow
+		
 	match fishData.FishSize:
 		FishData.SIZE.EXTRA_SMALL:
 			$FishSprite.texture = load("res://Art/Sprites/Fish/ExtraSmall.png")
@@ -63,7 +65,8 @@ func _on_area_2d_button_up():
 				var fishTween = get_tree().create_tween()
 				fishTween.tween_property($DetailedFish, "scale", Vector2.ONE, .1)
 				await fishTween.finished
-				FishDataReference.SellFish()
+
+				
 				$SplashAnim.visible = false
 				$FishSprite.visible = false
 				$RunAwayTimer.stop()
@@ -83,9 +86,16 @@ func GetFishSprite():
 
 
 func _on_complete_timer_timeout():
-	queue_free()
+	$DetailedFish/Rarity.visible = true
+	FishDataReference.SellFish()
+	await get_tree().create_timer(.3).timeout
+	$FishSprite/AnimationPlayer.stop()
+	
+	$FishSprite/AnimationPlayer.play("dance")
 
 
 func _on_animation_player_animation_finished(anim_name):
 	$FishSprite/AnimationPlayer.speed_scale = randf_range(1, 3.5)
+	if anim_name == "dance":
+		queue_free()
 	pass # Replace with function body.

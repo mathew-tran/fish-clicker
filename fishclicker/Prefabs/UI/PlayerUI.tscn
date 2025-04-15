@@ -19,9 +19,14 @@ offset_bottom = 44.0
 
 [node name="MoneyUI" parent="." instance=ExtResource("1_ihkin")]
 
+[node name="SpawnTextPos" parent="MoneyUI" index="4"]
+position = Vector2(56, 17)
+
 [node name="ShopUI" parent="." instance=ExtResource("3_1hdpr")]
+visible = false
 
 [node name="SwitchBaitUI" parent="." instance=ExtResource("5_lcbsa")]
+visible = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 10
@@ -45,3 +50,5 @@ script = ExtResource("6_od4qv")
 
 [connection signal="button_up" from="HBoxContainer/StoreButton" to="HBoxContainer/StoreButton" method="_on_button_up"]
 [connection signal="button_up" from="HBoxContainer/MainButton" to="HBoxContainer/MainButton" method="_on_button_up"]
+
+[editable path="MoneyUI"]

@@ -5,3 +5,6 @@ func GetGameManager() -> GameManager:
 
 func GetPlayerUI() -> PlayerUI:
 	return get_tree().get_nodes_in_group("PlayerUI")[0]
+
+func GetEffectsGroup():
+	return get_tree().get_nodes_in_group("Effects")[0]

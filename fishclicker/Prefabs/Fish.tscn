@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://lq2p2dxhm7r7"]
+[gd_scene load_steps=11 format=3 uid="uid://lq2p2dxhm7r7"]
 
 [ext_resource type="Texture2D" uid="uid://mcnxhrnpmffy" path="res://Art/Sprites/Fish/Small.png" id="1_b0x67"]
 [ext_resource type="Script" uid="uid://blmdcy45jk4rt" path="res://Scripts/Fish.gd" id="1_bd4gt"]
@@ -21,6 +21,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../DetailedFish:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_2srqr"]
 resource_name = "anim"
@@ -38,10 +50,27 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(-4, 0), Vector2(4, 0), Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_4xv0j"]
+resource_name = "dance"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../DetailedFish:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.73, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.286234, -0.336849, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1vj5r"]
 _data = {
 &"RESET": SubResource("Animation_yja77"),
-&"anim": SubResource("Animation_2srqr")
+&"anim": SubResource("Animation_2srqr"),
+&"dance": SubResource("Animation_4xv0j")
 }
 
 [node name="Fish" type="Node2D"]

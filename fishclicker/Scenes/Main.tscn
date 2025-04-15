@@ -90,3 +90,5 @@ position = Vector2(115, 119)
 [node name="FishSpawner" parent="." instance=ExtResource("5_q0kc4")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("9_ra0ju")]
+
+[node name="Effects" type="Node2D" parent="." groups=["Effects"]]

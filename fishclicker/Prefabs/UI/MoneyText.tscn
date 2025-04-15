@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://wyq3f4rmigua"]
+
+[ext_resource type="Script" uid="uid://ctxygdnh260sw" path="res://Scripts/UI/MoneyText.gd" id="1_g1tog"]
+[ext_resource type="Texture2D" uid="uid://b2xdh1xgrnr8j" path="res://Art/Ui/Money.png" id="2_iyxc2"]
+
+[node name="MoneyText" type="Node2D"]
+script = ExtResource("1_g1tog")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = -6.0
+offset_top = -3.0
+offset_right = 60.0
+offset_bottom = 37.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = -3
+
+[node name="Sign" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "+"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_iyxc2")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

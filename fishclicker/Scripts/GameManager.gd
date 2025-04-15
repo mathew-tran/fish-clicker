@@ -5,6 +5,7 @@ class_name GameManager
 
 
 signal MoneyUpdate(amount)
+signal MoneyChanged(amount)
 
 signal BaitChanged(baitData)
 
@@ -56,11 +57,13 @@ func UseCurrentBait():
 		ChangeBait(CurrentBait)
 		
 func AddMoney(amount):
+	MoneyChanged.emit(amount)
 	if GameData.has("Money"):
 		GameData["Money"] += int(amount)
 	MoneyUpdate.emit(GetMoney())
 
 func RemoveMoney(amount):
+	MoneyChanged.emit(-amount)
 	if GameData.has("Money"):
 		GameData["Money"] -= amount
 		
