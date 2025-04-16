@@ -11,6 +11,7 @@
 script = ExtResource("2_ewn0j")
 BaitName = "None"
 BaitImage = ExtResource("1_njkb6")
+BaitID = "000"
 Cost = 0
 CommonPool = Array[ExtResource("1_a8y0i")]([ExtResource("2_s6pys")])
 RarePool = Array[ExtResource("1_a8y0i")]([ExtResource("4_n7cjx")])

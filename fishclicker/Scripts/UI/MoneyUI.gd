@@ -28,7 +28,12 @@ func _on_timer_timeout() -> void:
 			diff = 5
 		if abs(TargetAmount - CurrentAmount) > 100:
 			diff = 10
-			
+		
+		if abs(TargetAmount - CurrentAmount) > 200:
+			diff = 40
+		
+		if abs(TargetAmount - CurrentAmount) > 300:
+			diff = 80
 		if TargetAmount > CurrentAmount:
 			CurrentAmount += diff
 		elif TargetAmount < CurrentAmount:

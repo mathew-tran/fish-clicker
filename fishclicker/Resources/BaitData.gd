@@ -13,14 +13,18 @@ class_name BaitData
 
 func GetRandomFish() -> FishData:
 	var result = randi() % 100
-	if result <= 70:
-		CommonPool.shuffle()	
-		return CommonPool[0]
-	if result <= 95:
-		RarePool.shuffle()
-		return RarePool[0]
-	LegendaryPool.shuffle()
-	return LegendaryPool[0]
+	var pool = CommonPool
+	if result <= 80:
+		pool = CommonPool
+	elif result <= 97:
+		if len(RarePool) > 0:
+			pool = RarePool
+	else:
+		if len(LegendaryPool) > 0:
+			pool = LegendaryPool
+	pool = pool.duplicate(true)
+	pool.shuffle()
+	return pool[0]
 	
 func HasCompletedBait():
 	return Finder.GetGameManager().HasCompletedChallenge(BaitID)
