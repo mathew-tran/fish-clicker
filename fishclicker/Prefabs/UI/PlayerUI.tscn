@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://duugweocsasug"]
+[gd_scene load_steps=10 format=3 uid="uid://duugweocsasug"]
 
 [ext_resource type="Script" uid="uid://b46jts17728lw" path="res://Scripts/UI/PlayerUI.gd" id="1_88yxu"]
 [ext_resource type="PackedScene" uid="uid://cs6oynhlgroby" path="res://Prefabs/UI/MoneyUI.tscn" id="1_ihkin"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cpj4vf2ruia5d" path="res://Scripts/UI/MainButton.gd" id="6_od4qv"]
 [ext_resource type="PackedScene" uid="uid://g5omilybre1s" path="res://Prefabs/UI/SwitchBaitButton.tscn" id="7_lcbsa"]
 [ext_resource type="PackedScene" uid="uid://dj2x6h1ikg8t2" path="res://Prefabs/UI/AssociatedBaitFish.tscn" id="8_2es3r"]
+[ext_resource type="PackedScene" uid="uid://1tiu5h74fpyn" path="res://Prefabs/UI/FishingRank.tscn" id="9_asipn"]
 
 [node name="CanvasLayer" type="CanvasLayer" groups=["PlayerUI"]]
 script = ExtResource("1_88yxu")
@@ -54,6 +55,8 @@ offset_left = 204.0
 offset_top = 66.0
 offset_right = 239.0
 offset_bottom = 116.0
+
+[node name="EXP" parent="." instance=ExtResource("9_asipn")]
 
 [connection signal="button_up" from="HBoxContainer/StoreButton" to="HBoxContainer/StoreButton" method="_on_button_up"]
 [connection signal="button_up" from="HBoxContainer/MainButton" to="HBoxContainer/MainButton" method="_on_button_up"]
