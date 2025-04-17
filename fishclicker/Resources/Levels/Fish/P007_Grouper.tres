@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://15l5weysukne"]
+
+[ext_resource type="Texture2D" uid="uid://b681ko0w1yhfa" path="res://Art/Sprites/Fish/Detail/Grouper.png" id="1_2wt0u"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_kqen0"]
+
+[resource]
+script = ExtResource("2_kqen0")
+FishImage = ExtResource("1_2wt0u")
+FishName = "Grouper"
+Rarity = 0
+FishSize = 1
+FishID = "P007"
+Tugs = 2
+TimeLimit = 0.8
+Cost = 18

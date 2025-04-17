@@ -3,6 +3,7 @@ extends Button
 
 @export var OwnedBait : BaitData
 
+
 func _ready() -> void:
 	Setup()
 	name = "BAITBUTTON-" + OwnedBait.BaitName
@@ -17,8 +18,11 @@ func Update():
 	var amount = Finder.GetGameManager().GetBait(OwnedBait.BaitName)
 	
 	disabled = HasBait() == false
-	$CannotAfford.visible = disabled
+	$CannotAfford.visible = disabled 
 	
+	if HasBait() == false:
+		$CannotAfford/Label.text = "No Bait"
+
 	if OwnedBait.bIsInfinite == false:
 		$Owned.text = "(" + str(amount) + ")"
 	else:

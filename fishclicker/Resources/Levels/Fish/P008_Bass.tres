@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://xgxinx0isj30"]
+
+[ext_resource type="Texture2D" uid="uid://bn5kv2s6vlj75" path="res://Art/Sprites/Fish/Detail/Bass.png" id="1_dqool"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_10tn4"]
+
+[resource]
+script = ExtResource("2_10tn4")
+FishImage = ExtResource("1_dqool")
+FishName = "Bass"
+Rarity = 0
+FishSize = 1
+FishID = "P008"
+Tugs = 4
+TimeLimit = 0.8
+Cost = 22

@@ -44,5 +44,6 @@ grow_vertical = 2
 [node name="BAIT-Shrimp Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("2_s3n5v")
+FishingLevel = 1
 
 [connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]

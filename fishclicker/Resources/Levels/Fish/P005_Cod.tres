@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://durkcio7hmep7"]
+
+[ext_resource type="Texture2D" uid="uid://c5g2oqh45u1yg" path="res://Art/Sprites/Fish/Detail/Cod.png" id="1_gs0t1"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_iw5er"]
+
+[resource]
+script = ExtResource("2_iw5er")
+FishImage = ExtResource("1_gs0t1")
+FishName = "Cod"
+Rarity = 0
+FishSize = 1
+FishID = "P005"
+Tugs = 2
+TimeLimit = 1.0
+Cost = 18

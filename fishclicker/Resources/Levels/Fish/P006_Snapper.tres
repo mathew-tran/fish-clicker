@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://cqaiwfabxpkhj"]
+
+[ext_resource type="Texture2D" uid="uid://dub75f78cluxm" path="res://Art/Sprites/Fish/Detail/Snapper.png" id="1_drtqd"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_eym3q"]
+
+[resource]
+script = ExtResource("2_eym3q")
+FishImage = ExtResource("1_drtqd")
+FishName = "Snapper"
+Rarity = 0
+FishSize = 1
+FishID = "P006"
+Tugs = 4
+TimeLimit = 1.8
+Cost = 15

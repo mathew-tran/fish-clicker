@@ -47,6 +47,7 @@ func _ready():
 		"XP" : 0,
 		"Level" : 0
 	}
+	XPGained.emit(0)
 	
 	await get_tree().process_frame
 	AddMoney(0)
