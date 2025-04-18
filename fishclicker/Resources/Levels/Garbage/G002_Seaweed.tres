@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://i3gg0jqnaoxv"]
+
+[ext_resource type="Texture2D" uid="uid://b3gnyigq0e7j7" path="res://Art/Sprites/Garbage/Seaweed.png" id="1_vyfve"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_q27cd"]
+
+[resource]
+script = ExtResource("2_q27cd")
+FishImage = ExtResource("1_vyfve")
+FishName = "Garbage"
+Rarity = 0
+FishSize = 2
+FishID = "G001"
+Tugs = 1
+TimeLimit = 5.0
+Cost = 1

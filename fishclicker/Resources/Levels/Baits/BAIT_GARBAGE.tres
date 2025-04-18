@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BaitData" load_steps=7 format=3 uid="uid://ebvrnngrr87l"]
+
+[ext_resource type="Texture2D" uid="uid://6741aa4kayh" path="res://Art/Sprites/Bait/ShrimpBait.png" id="1_tov7e"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_o82xl"]
+[ext_resource type="Resource" uid="uid://dne7ybm2l8ojc" path="res://Resources/Levels/Garbage/G003_Paper.tres" id="3_kudh6"]
+[ext_resource type="Resource" uid="uid://i3gg0jqnaoxv" path="res://Resources/Levels/Garbage/G002_Seaweed.tres" id="4_0dtrp"]
+[ext_resource type="Resource" uid="uid://beoj1sk32yil3" path="res://Resources/Levels/Garbage/G001_Cola.tres" id="5_pmakb"]
+[ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="6_fwjk7"]
+
+[resource]
+script = ExtResource("6_fwjk7")
+BaitName = "Garbage"
+BaitImage = ExtResource("1_tov7e")
+BaitID = "G"
+Cost = 3
+CommonPool = Array[ExtResource("2_o82xl")]([ExtResource("3_kudh6")])
+RarePool = Array[ExtResource("2_o82xl")]([ExtResource("5_pmakb")])
+LegendaryPool = Array[ExtResource("2_o82xl")]([ExtResource("4_0dtrp")])
+bIsInfinite = false
+metadata/_custom_type_script = "uid://bgc7uj0bli212"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dqv3w4btqlc2m"]
+
+[ext_resource type="Texture2D" uid="uid://ccwiax3e5adq8" path="res://Art/Sprites/Fish/Detail/Trout.png" id="1_0eqlf"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_bat08"]
+
+[resource]
+script = ExtResource("2_bat08")
+FishImage = ExtResource("1_0eqlf")
+FishName = "Trout"
+Rarity = 1
+FishSize = 2
+FishID = "P009"
+Tugs = 5
+TimeLimit = 0.7
+Cost = 14

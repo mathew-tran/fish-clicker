@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaitData" load_steps=11 format=3 uid="uid://bb16lfrygisqc"]
+[gd_resource type="Resource" script_class="BaitData" load_steps=13 format=3 uid="uid://bb16lfrygisqc"]
 
 [ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="1_a8y0i"]
 [ext_resource type="Texture2D" uid="uid://d07cgpr0enos" path="res://Art/Sprites/Bait/NoneBait.png" id="1_njkb6"]
@@ -9,7 +9,9 @@
 [ext_resource type="Resource" uid="uid://dgi7idvdqjjto" path="res://Resources/Levels/Fish/P002_BlueTang.tres" id="4_n7cjx"]
 [ext_resource type="Resource" uid="uid://cqaiwfabxpkhj" path="res://Resources/Levels/Fish/P006_Snapper.tres" id="5_apq5u"]
 [ext_resource type="Resource" uid="uid://15l5weysukne" path="res://Resources/Levels/Fish/P007_Grouper.tres" id="6_frqcx"]
+[ext_resource type="Resource" uid="uid://dc87q852shn6x" path="res://Resources/Levels/Fish/P010_Angelfish.tres" id="7_dmtwn"]
 [ext_resource type="Resource" uid="uid://xgxinx0isj30" path="res://Resources/Levels/Fish/P008_Bass.tres" id="9_j4dh8"]
+[ext_resource type="Resource" uid="uid://dqv3w4btqlc2m" path="res://Resources/Levels/Fish/P009_Trout.tres" id="10_60hmx"]
 
 [resource]
 script = ExtResource("2_ewn0j")
@@ -17,8 +19,8 @@ BaitName = "None"
 BaitImage = ExtResource("1_njkb6")
 BaitID = "000"
 Cost = 0
-CommonPool = Array[ExtResource("1_a8y0i")]([ExtResource("2_s6pys"), ExtResource("4_apq5u"), ExtResource("5_apq5u"), ExtResource("6_frqcx")])
-RarePool = Array[ExtResource("1_a8y0i")]([ExtResource("4_n7cjx"), ExtResource("9_j4dh8")])
+CommonPool = Array[ExtResource("1_a8y0i")]([ExtResource("2_s6pys"), ExtResource("4_apq5u"), ExtResource("5_apq5u"), ExtResource("6_frqcx"), ExtResource("7_dmtwn")])
+RarePool = Array[ExtResource("1_a8y0i")]([ExtResource("4_n7cjx"), ExtResource("9_j4dh8"), ExtResource("10_60hmx")])
 LegendaryPool = Array[ExtResource("1_a8y0i")]([ExtResource("3_njkb6")])
 bIsInfinite = true
 metadata/_custom_type_script = "uid://bgc7uj0bli212"
