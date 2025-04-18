@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dfr62xfqw1ynt"]
+
+[ext_resource type="Texture2D" uid="uid://djco4ws502m15" path="res://Art/Sprites/Fish/Detail/Flounder.png" id="1_sjykk"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_t8utc"]
+
+[resource]
+script = ExtResource("2_t8utc")
+FishImage = ExtResource("1_sjykk")
+FishName = "Flounder"
+Rarity = 0
+FishSize = 1
+FishID = "P012"
+Tugs = 5
+TimeLimit = 3.0
+Cost = 21

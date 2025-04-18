@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dgeog3qojphk0"]
+
+[ext_resource type="Texture2D" uid="uid://djuvidw427qrt" path="res://Art/Sprites/Fish/Detail/Redfish.png" id="1_x3mx2"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_0y1nl"]
+
+[resource]
+script = ExtResource("2_0y1nl")
+FishImage = ExtResource("1_x3mx2")
+FishName = "Redfish"
+Rarity = 0
+FishSize = 2
+FishID = "P011"
+Tugs = 7
+TimeLimit = 2.0
+Cost = 28
