@@ -1,7 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dh11xq6bpg5aq"]
+[gd_scene load_steps=8 format=3 uid="uid://dh11xq6bpg5aq"]
 
+[ext_resource type="Shader" uid="uid://ds6ww33sd8ufo" path="res://Shades/FishingRod.gdshader" id="1_36s5w"]
 [ext_resource type="Texture2D" uid="uid://cw6ts8ywxxs27" path="res://Art/Sprites/Rod.png" id="1_mecuj"]
 [ext_resource type="Script" uid="uid://o2w8b1mrnfqg" path="res://Scripts/FishingRod.gd" id="2_ag8vk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vq6s5"]
+shader = ExtResource("1_36s5w")
+shader_parameter/clr = Color(0.960784, 0.960784, 0.960784, 0.25098)
+shader_parameter/type = 1
+shader_parameter/thickness = 0.4
 
 [sub_resource type="Animation" id="Animation_yl5eu"]
 length = 0.001
@@ -41,6 +48,7 @@ _data = {
 }
 
 [node name="FishingRod" type="Sprite2D" groups=["FishingRod"]]
+material = SubResource("ShaderMaterial_vq6s5")
 position = Vector2(26, 133)
 texture = ExtResource("1_mecuj")
 script = ExtResource("2_ag8vk")
@@ -52,7 +60,7 @@ width = 2.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_f65s2")
+&"": SubResource("AnimationLibrary_f65s2")
 }
 speed_scale = 1.5
 

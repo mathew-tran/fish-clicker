@@ -62,6 +62,7 @@ func _on_area_2d_button_up():
 				$SplashAnim.stop()
 				$DetailedFish.scale = Vector2.ZERO
 				$DetailedFish.visible = true
+				$Ripple.queue_free()
 				var fishTween = get_tree().create_tween()
 				fishTween.tween_property($DetailedFish, "scale", Vector2.ONE, .1)
 				await fishTween.finished

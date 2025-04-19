@@ -1,11 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://lq2p2dxhm7r7"]
+[gd_scene load_steps=17 format=3 uid="uid://lq2p2dxhm7r7"]
 
 [ext_resource type="Texture2D" uid="uid://mcnxhrnpmffy" path="res://Art/Sprites/Fish/Small.png" id="1_b0x67"]
 [ext_resource type="Script" uid="uid://blmdcy45jk4rt" path="res://Scripts/Fish.gd" id="1_bd4gt"]
 [ext_resource type="PackedScene" uid="uid://kabmds7dffp3" path="res://Prefabs/Activity.tscn" id="2_lxnhx"]
+[ext_resource type="Shader" uid="uid://dn6jo3sggjy25" path="res://Shades/Fish.gdshader" id="2_qg13p"]
 [ext_resource type="PackedScene" uid="uid://c2tnx6dteb1h6" path="res://Prefabs/Splash.tscn" id="3_uukyq"]
 [ext_resource type="Texture2D" uid="uid://cthfkkaock6k" path="res://Art/Sprites/Fish/Detail/GoldFish.png" id="5_p83jl"]
 [ext_resource type="Texture2D" uid="uid://datcuha3aklih" path="res://Art/Ui/Stars.png" id="6_4xv0j"]
+[ext_resource type="Shader" uid="uid://ds6ww33sd8ufo" path="res://Shades/FishingRod.gdshader" id="6_pox3r"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qg13p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qg13p"]
+shader = ExtResource("2_qg13p")
+shader_parameter/frequency = 5.0
+shader_parameter/amplitude = 2.7
+shader_parameter/ripple_rate = 16.0
+shader_parameter/wave_amplitude = 0.1
+shader_parameter/wave_frequency = 4.0
+shader_parameter/noise = SubResource("NoiseTexture2D_qg13p")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pox3r"]
 
 [sub_resource type="Animation" id="Animation_yja77"]
 length = 0.001
@@ -73,12 +88,26 @@ _data = {
 &"dance": SubResource("Animation_4xv0j")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbxc8"]
+shader = ExtResource("6_pox3r")
+shader_parameter/clr = Color(1, 1, 1, 0.494118)
+shader_parameter/type = 1
+shader_parameter/thickness = 1.0
+
 [node name="Fish" type="Node2D"]
 position = Vector2(139, 100)
 script = ExtResource("1_bd4gt")
 metadata/_edit_group_ = true
 
+[node name="Ripple" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_qg13p")
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 21.0
+offset_bottom = 21.0
+
 [node name="FishSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_pox3r")
 texture = ExtResource("1_b0x67")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FishSprite"]
@@ -104,6 +133,7 @@ offset_bottom = 10.0
 
 [node name="DetailedFish" type="Sprite2D" parent="."]
 visible = false
+material = SubResource("ShaderMaterial_nbxc8")
 texture = ExtResource("5_p83jl")
 script = ExtResource("1_bd4gt")
 

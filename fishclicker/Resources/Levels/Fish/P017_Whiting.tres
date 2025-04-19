@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://blrjgex48y75n"]
+
+[ext_resource type="Texture2D" uid="uid://bcquscwfqmlfy" path="res://Art/Sprites/Fish/Detail/Whiting.png" id="1_a5mks"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_t71v2"]
+
+[resource]
+script = ExtResource("2_t71v2")
+FishImage = ExtResource("1_a5mks")
+FishName = "Whiting"
+Rarity = 1
+FishSize = 2
+FishID = "P017"
+Tugs = 5
+TimeLimit = 1.2
+Cost = 20

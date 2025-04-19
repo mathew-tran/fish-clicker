@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaitData" load_steps=10 format=3 uid="uid://ct5utnv2aas06"]
+[gd_resource type="Resource" script_class="BaitData" load_steps=13 format=3 uid="uid://ct5utnv2aas06"]
 
 [ext_resource type="Texture2D" uid="uid://6741aa4kayh" path="res://Art/Sprites/Bait/ShrimpBait.png" id="1_0fyk8"]
 [ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_txsd1"]
@@ -7,7 +7,10 @@
 [ext_resource type="Resource" uid="uid://clbjd8r0qxoms" path="res://Resources/Levels/Fish/P004_ClownFish.tres" id="5_txsd1"]
 [ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="6_poms2"]
 [ext_resource type="Resource" uid="uid://cir85ccjurxgr" path="res://Resources/Levels/Fish/P013_Sheepshead.tres" id="6_txsd1"]
+[ext_resource type="Resource" uid="uid://kafue2ukfja4" path="res://Resources/Levels/Fish/P016_Permit.tres" id="6_uq1f1"]
+[ext_resource type="Resource" uid="uid://blrjgex48y75n" path="res://Resources/Levels/Fish/P017_Whiting.tres" id="7_poms2"]
 [ext_resource type="Resource" uid="uid://ct8g4dtbjeupn" path="res://Resources/Levels/Fish/P014_Pompano.tres" id="7_vt8jv"]
+[ext_resource type="Resource" uid="uid://r38c5qalgdia" path="res://Resources/Levels/Fish/P018_Croaker.tres" id="8_h25y1"]
 [ext_resource type="Resource" uid="uid://bsm0mwxlykcvk" path="res://Resources/Levels/Fish/P015_MangroveSnapper.tres" id="8_llca7"]
 
 [resource]
@@ -18,6 +21,6 @@ BaitID = "001"
 Cost = 3
 CommonPool = Array[ExtResource("2_txsd1")]([ExtResource("5_txsd1"), ExtResource("4_fs3ei"), ExtResource("5_0fyk8")])
 RarePool = Array[ExtResource("2_txsd1")]([ExtResource("6_txsd1"), ExtResource("7_vt8jv"), ExtResource("8_llca7")])
-LegendaryPool = Array[ExtResource("2_txsd1")]([])
+LegendaryPool = Array[ExtResource("2_txsd1")]([ExtResource("6_uq1f1"), ExtResource("7_poms2"), ExtResource("8_h25y1")])
 bIsInfinite = false
 metadata/_custom_type_script = "uid://bgc7uj0bli212"

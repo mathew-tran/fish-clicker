@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://kafue2ukfja4"]
+
+[ext_resource type="Texture2D" uid="uid://dw77oybr0j2lj" path="res://Art/Sprites/Fish/Detail/Permit.png" id="1_vnjp8"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_eep2u"]
+
+[resource]
+script = ExtResource("2_eep2u")
+FishImage = ExtResource("1_vnjp8")
+FishName = "Permit"
+Rarity = 0
+FishSize = 2
+FishID = "P016"
+Tugs = 4
+TimeLimit = 1.2
+Cost = 15
