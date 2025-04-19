@@ -57,7 +57,7 @@ func SellFish():
 			amount *= 2.0
 			
 	amount = round(amount)
-	Finder.GetGameManager().AddFish(FishID)
+	Finder.GetGameManager().AddFish(self)
 	Finder.GetGameManager().AddMoney(amount)
 
 

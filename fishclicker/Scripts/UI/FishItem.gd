@@ -8,6 +8,7 @@ func Setup(fishData : FishData):
 	$Image.texture = fishData.FishImage
 	$Label.text = "???"
 	
+	
 	var bHasCaught = fishData.HasCaughtFish()
 	
 	match fishData.Rarity:

@@ -73,12 +73,15 @@ func AddCompletedChallenge(baitID):
 func HasCompletedChallenge(baitID):
 	return GameData["BaitCompleted"].has(baitID)
 	
-func AddFish(fishID):
-	if GameData["FishCaught"].has(fishID):
-		GameData["FishCaught"][fishID] += 1
+func AddFish(fishData : FishData):
+	if GameData["FishCaught"].has(fishData.FishID):
+		GameData["FishCaught"][fishData.FishID] += 1
 	else:
-		GameData["FishCaught"][fishID] = 1
+		GameData["FishCaught"][fishData.FishID] = 1
+		var textToSay = "Found: " + fishData.FishName
+		Finder.GetUnlockText().AddText(textToSay, 1.0)
 		AddXP(30)
+		
 
 func HasCaughtFish(fishID):
 	return GameData["FishCaught"].has(fishID)
