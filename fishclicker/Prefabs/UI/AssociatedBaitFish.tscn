@@ -4,28 +4,67 @@
 [ext_resource type="PackedScene" uid="uid://clv7ohkavdy51" path="res://Prefabs/UI/FishItem.tscn" id="2_xpn6f"]
 
 [node name="AssociatedBatiFish" type="Panel"]
-offset_right = 36.0
+custom_minimum_size = Vector2(50, 52)
+offset_left = -5.0
+offset_right = 45.0
 offset_bottom = 52.0
 script = ExtResource("1_y42bo")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(20, 50)
+custom_minimum_size = Vector2(92, 86)
 layout_mode = 0
+offset_left = 2.0
 offset_top = 7.0
-offset_right = 71.0
-offset_bottom = 99.0
+offset_right = 94.0
+offset_bottom = 93.0
 scale = Vector2(0.5, 0.5)
 
 [node name="Container" type="GridContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(90, 80)
 layout_mode = 2
-columns = 3
+size_flags_horizontal = 0
+size_flags_vertical = 0
+columns = 4
 
 [node name="AssociatedFishItem" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
 layout_mode = 2
 
+[node name="AssociatedFishItem2" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem4" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem5" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem6" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem7" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem8" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem9" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem10" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem11" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem12" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
+[node name="AssociatedFishItem3" parent="ScrollContainer/Container" instance=ExtResource("2_xpn6f")]
+layout_mode = 2
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 120.0
+offset_right = 167.0
 offset_bottom = 23.0
 scale = Vector2(0.3, 0.3)
 text = "FISH"

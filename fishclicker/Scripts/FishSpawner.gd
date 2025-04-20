@@ -10,7 +10,7 @@ func _ready():
 
 	
 func DetermineTime():
-	$Timer.wait_time = randf_range(2, 4)
+	$Timer.wait_time = randf_range(2, 12)
 	$Timer.start()
 	print("Spawning Fish")
 

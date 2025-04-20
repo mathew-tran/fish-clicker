@@ -52,10 +52,10 @@ text = "MAIN"
 script = ExtResource("6_od4qv")
 
 [node name="AssociatedBaitFish" parent="." instance=ExtResource("8_2es3r")]
-offset_left = 204.0
+offset_left = 188.0
 offset_top = 66.0
-offset_right = 239.0
-offset_bottom = 116.0
+offset_right = 238.0
+offset_bottom = 118.0
 
 [node name="EXP" parent="." instance=ExtResource("9_asipn")]
 

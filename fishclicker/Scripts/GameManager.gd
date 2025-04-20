@@ -28,7 +28,7 @@ func _ready():
 	XPTimer = Timer.new()
 	add_child(XPTimer)
 	XPTimer.autostart = true
-	XPTimer.wait_time = .1
+	XPTimer.wait_time = .04
 	
 	XPTimer.timeout.connect(OnXPTimerTimeout)
 	XPTimer.start()

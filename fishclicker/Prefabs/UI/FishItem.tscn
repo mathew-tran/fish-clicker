@@ -1,29 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://clv7ohkavdy51"]
+[gd_scene load_steps=5 format=3 uid="uid://clv7ohkavdy51"]
 
 [ext_resource type="Script" uid="uid://d1suvxdgbpukw" path="res://Scripts/UI/FishItem.gd" id="1_11t5s"]
 [ext_resource type="Texture2D" uid="uid://cthfkkaock6k" path="res://Art/Sprites/Fish/Detail/GoldFish.png" id="1_i32tc"]
+[ext_resource type="Shader" uid="uid://ds6ww33sd8ufo" path="res://Shades/FishingRod.gdshader" id="2_w3xfx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x3s3f"]
+shader = ExtResource("2_w3xfx")
+shader_parameter/clr = Color(0.321728, 0.321728, 0.321728, 1)
+shader_parameter/type = 1
+shader_parameter/thickness = 1.0
 
 [node name="AssociatedFishItem" type="Control"]
 custom_minimum_size = Vector2(20, 25)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 25.0
+offset_bottom = 26.0
 script = ExtResource("1_11t5s")
 
 [node name="Image" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_x3s3f")
 custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-offset_right = 20.0
-offset_bottom = 20.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_i32tc")
 expand_mode = 4
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 105.0
-offset_bottom = 39.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = 4.0
+offset_right = 117.5
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.2, 0.2)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
 text = "???"
 horizontal_alignment = 1
 autowrap_mode = 2

@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://wyq3f4rmigua"]
+[gd_scene load_steps=5 format=3 uid="uid://wyq3f4rmigua"]
 
 [ext_resource type="Script" uid="uid://ctxygdnh260sw" path="res://Scripts/UI/MoneyText.gd" id="1_g1tog"]
+[ext_resource type="Shader" uid="uid://ds6ww33sd8ufo" path="res://Shades/FishingRod.gdshader" id="2_ell3s"]
 [ext_resource type="Texture2D" uid="uid://b2xdh1xgrnr8j" path="res://Art/Ui/Money.png" id="2_iyxc2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gcnv6"]
+shader = ExtResource("2_ell3s")
+shader_parameter/clr = Color(0, 0, 0, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
 
 [node name="MoneyText" type="Node2D"]
 script = ExtResource("1_g1tog")
@@ -19,6 +26,7 @@ layout_mode = 2
 text = "+"
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+material = SubResource("ShaderMaterial_gcnv6")
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 texture = ExtResource("2_iyxc2")
@@ -27,6 +35,9 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
 text = "100"
 
 [node name="Timer" type="Timer" parent="."]

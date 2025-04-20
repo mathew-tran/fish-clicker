@@ -19,8 +19,10 @@ func Setup(bait : BaitData):
 		$Container/Owned.text = "(" + str(amount) + ")"
 		if amount == 0:
 			$Container/Owned.modulate = Color.RED
+			$Container/Owned.text = "No Bait Left"
 	else:
 		$Container/Owned.text = "(∞)" 
+		$Container/Owned.modulate = Color.AQUA
 
 
 func _on_button_up() -> void:

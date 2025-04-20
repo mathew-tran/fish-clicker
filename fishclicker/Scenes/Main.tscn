@@ -75,12 +75,58 @@ material = SubResource("ShaderMaterial_bmxlf")
 position = Vector2(117, 78.5)
 scale = Vector2(7.5, 4.84375)
 texture = ExtResource("8_vy5pj")
+metadata/_edit_lock_ = true
 
 [node name="SpawnMarkers" type="Node2D" parent="."]
 visible = false
 
 [node name="SpawnMarker" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
 position = Vector2(94, 76)
+
+[node name="SpawnMarker15" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(64, 67)
+
+[node name="SpawnMarker16" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(84, 46)
+
+[node name="SpawnMarker17" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(47, 90)
+
+[node name="SpawnMarker18" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(77, 103)
+
+[node name="SpawnMarker19" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(77, 80)
+
+[node name="SpawnMarker20" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(38, 59)
+
+[node name="SpawnMarker21" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(58, 39)
+
+[node name="SpawnMarker22" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(16, 42)
+
+[node name="SpawnMarker23" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(19, 91)
+
+[node name="SpawnMarker24" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(60, 121)
+
+[node name="SpawnMarker25" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(91, 121)
+
+[node name="SpawnMarker26" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(158, 44)
+
+[node name="SpawnMarker27" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(117, 30)
+
+[node name="SpawnMarker28" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(148, 132)
+
+[node name="SpawnMarker29" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
+position = Vector2(176, 131)
 
 [node name="SpawnMarker2" parent="SpawnMarkers" instance=ExtResource("3_4ctxt")]
 position = Vector2(110, 59)
@@ -128,3 +174,6 @@ position = Vector2(115, 119)
 [node name="Effects" type="Node2D" parent="." groups=["Effects"]]
 
 [node name="FishingRod" parent="." instance=ExtResource("2_5uww4")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(4.04298e-06, 0.551702, 0.739451, 1)
