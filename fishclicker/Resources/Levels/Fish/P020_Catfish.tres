@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bqm4vt42vp1o7"]
+
+[ext_resource type="Texture2D" uid="uid://c32xd87k8yoc8" path="res://Art/Sprites/Fish/Detail/Catfishl.png" id="1_6x3mo"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_e18yg"]
+
+[resource]
+script = ExtResource("2_e18yg")
+FishImage = ExtResource("1_6x3mo")
+FishName = "Catfish"
+Rarity = 0
+FishSize = 0
+FishID = "P020"
+Tugs = 6
+TimeLimit = 5.0
+Cost = 8

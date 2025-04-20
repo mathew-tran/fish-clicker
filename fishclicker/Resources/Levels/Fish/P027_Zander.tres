@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://5wua685pm2sg"]
+
+[ext_resource type="Texture2D" uid="uid://dpagxe26a7njp" path="res://Art/Sprites/Fish/Detail/Zander.png" id="1_sykie"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_is37x"]
+
+[resource]
+script = ExtResource("2_is37x")
+FishImage = ExtResource("1_sykie")
+FishName = "Zander"
+Rarity = 0
+FishSize = 1
+FishID = "P027"
+Tugs = 3
+TimeLimit = 4.0
+Cost = 18

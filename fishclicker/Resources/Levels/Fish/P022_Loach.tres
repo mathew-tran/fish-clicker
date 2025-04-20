@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://mn77tssdg4lu"]
+
+[ext_resource type="Texture2D" uid="uid://cxs34kxb0f3xi" path="res://Art/Sprites/Fish/Detail/Loach.png" id="1_4nht2"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_mgldq"]
+
+[resource]
+script = ExtResource("2_mgldq")
+FishImage = ExtResource("1_4nht2")
+FishName = "Loach"
+Rarity = 0
+FishSize = 1
+FishID = "P022"
+Tugs = 2
+TimeLimit = 0.5
+Cost = 4

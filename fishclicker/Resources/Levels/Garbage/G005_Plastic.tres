@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://c7in1ank8amqw"]
+
+[ext_resource type="Texture2D" uid="uid://bxtmwf7fmdl2k" path="res://Art/Sprites/Garbage/Plastic.png" id="1_17tq8"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_j3xdy"]
+
+[resource]
+script = ExtResource("2_j3xdy")
+FishImage = ExtResource("1_17tq8")
+FishName = "Plastic (Garbage)"
+Rarity = 0
+FishSize = 0
+FishID = "G005"
+Tugs = 3
+TimeLimit = 2.0
+Cost = 0

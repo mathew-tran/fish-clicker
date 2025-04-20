@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://beoj1sk32yil3"]
 
-[ext_resource type="Texture2D" uid="uid://cthfkkaock6k" path="res://Art/Sprites/Fish/Detail/GoldFish.png" id="1_j8mgp"]
+[ext_resource type="Texture2D" uid="uid://dsxf5brrfl5yb" path="res://Art/Sprites/Garbage/Cola.png" id="1_td8uh"]
 [ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_3i67j"]
 
 [resource]
 script = ExtResource("2_3i67j")
-FishImage = ExtResource("1_j8mgp")
-FishName = "Goldfish"
+FishImage = ExtResource("1_td8uh")
+FishName = "Cola (Garbage)"
 Rarity = 0
 FishSize = 1
-FishID = "P001"
+FishID = "G001"
 Tugs = 3
 TimeLimit = 5.0
-Cost = 2
+Cost = 0

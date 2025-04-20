@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://daq70moue4qcc"]
+
+[ext_resource type="Texture2D" uid="uid://uiw2utu6h6ia" path="res://Art/Sprites/Fish/Detail/Eel.png" id="1_p88a4"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_s5uuc"]
+
+[resource]
+script = ExtResource("2_s5uuc")
+FishImage = ExtResource("1_p88a4")
+FishName = "Eel"
+Rarity = 0
+FishSize = 1
+FishID = "P024"
+Tugs = 2
+TimeLimit = 2.0
+Cost = 16

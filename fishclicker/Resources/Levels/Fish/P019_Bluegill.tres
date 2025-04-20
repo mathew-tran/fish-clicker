@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://cccbw1tfimxxi"]
+
+[ext_resource type="Texture2D" uid="uid://dfbx8flho6dkh" path="res://Art/Sprites/Fish/Detail/Bluegill.png" id="1_bikoa"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_ecayw"]
+
+[resource]
+script = ExtResource("2_ecayw")
+FishImage = ExtResource("1_bikoa")
+FishName = "Bluegill"
+Rarity = 0
+FishSize = 0
+FishID = "P019"
+Tugs = 4
+TimeLimit = 1.5
+Cost = 14

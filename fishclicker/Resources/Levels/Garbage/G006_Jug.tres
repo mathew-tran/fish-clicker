@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dwnwb4ojkqkaa"]
+
+[ext_resource type="Texture2D" uid="uid://bdcmsltb3v315" path="res://Art/Sprites/Garbage/Jug.png" id="1_p6bqd"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_w7lol"]
+
+[resource]
+script = ExtResource("2_w7lol")
+FishImage = ExtResource("1_p6bqd")
+FishName = "Jug (Garbage)"
+Rarity = 0
+FishSize = 2
+FishID = "G006"
+Tugs = 2
+TimeLimit = 1.0
+Cost = 1

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_m6fxh")
 FishImage = ExtResource("1_bpvcj")
-FishName = "Garbage"
+FishName = "Paper (Garbage)"
 Rarity = 0
 FishSize = 1
 FishID = "G003"

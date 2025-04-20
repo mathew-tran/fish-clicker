@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://8rpjnr34ggnk"]
+
+[ext_resource type="Texture2D" uid="uid://bvemxt7vygbjh" path="res://Art/Sprites/Garbage/Paper.png" id="1_507q3"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_pfc17"]
+
+[resource]
+script = ExtResource("2_pfc17")
+FishImage = ExtResource("1_507q3")
+FishName = "Paper (Garbage)"
+Rarity = 0
+FishSize = 1
+FishID = "G003"
+Tugs = 3
+TimeLimit = 2.0
+Cost = 1

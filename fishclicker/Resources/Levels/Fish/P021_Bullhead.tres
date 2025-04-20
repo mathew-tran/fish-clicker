@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dym8vv2lvr4qs"]
+
+[ext_resource type="Texture2D" uid="uid://bohg3b36kml2m" path="res://Art/Sprites/Fish/Detail/Bullhead.png" id="1_kpegj"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_85wjs"]
+
+[resource]
+script = ExtResource("2_85wjs")
+FishImage = ExtResource("1_kpegj")
+FishName = "Bullhead"
+Rarity = 0
+FishSize = 1
+FishID = "P021"
+Tugs = 3
+TimeLimit = 2.0
+Cost = 11

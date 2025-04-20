@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dthxr8sm66txr"]
+
+[ext_resource type="Texture2D" uid="uid://dd7f1dttdtpm7" path="res://Art/Sprites/Fish/Detail/Crayfish.png" id="1_5h2q8"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_28aqt"]
+
+[resource]
+script = ExtResource("2_28aqt")
+FishImage = ExtResource("1_5h2q8")
+FishName = "Crayfish"
+Rarity = 1
+FishSize = 2
+FishID = "P023"
+Tugs = 4
+TimeLimit = 2.0
+Cost = 20

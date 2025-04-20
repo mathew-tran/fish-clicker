@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bfo72gm50hsj"]
+
+[ext_resource type="Texture2D" uid="uid://bk6spa30qmu2q" path="res://Art/Sprites/Fish/Detail/Chub.png" id="1_1noow"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_vd37u"]
+
+[resource]
+script = ExtResource("2_vd37u")
+FishImage = ExtResource("1_1noow")
+FishName = "Chub"
+Rarity = 1
+FishSize = 2
+FishID = "P025"
+Tugs = 4
+TimeLimit = 2.0
+Cost = 15
