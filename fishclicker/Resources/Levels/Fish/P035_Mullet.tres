@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://d3j3qdcufqjc8"]
+
+[ext_resource type="Texture2D" uid="uid://1j2brwr8pvxs" path="res://Art/Sprites/Fish/Detail/Mullet.png" id="1_rl1gg"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_0a7ls"]
+
+[resource]
+script = ExtResource("2_0a7ls")
+FishImage = ExtResource("1_rl1gg")
+FishName = "Mullet"
+Rarity = 0
+FishSize = 1
+FishID = "P035"
+Tugs = 8
+TimeLimit = 2.0
+Cost = 30

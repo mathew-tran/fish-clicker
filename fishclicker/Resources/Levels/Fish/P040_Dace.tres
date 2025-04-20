@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://cyvalxq66j755"]
+
+[ext_resource type="Texture2D" uid="uid://d3h55vauxknu8" path="res://Art/Sprites/Fish/Detail/Dace.png" id="1_8dpil"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_02eet"]
+
+[resource]
+script = ExtResource("2_02eet")
+FishImage = ExtResource("1_8dpil")
+FishName = "Dace"
+Rarity = 0
+FishSize = 1
+FishID = "P040"
+Tugs = 4
+TimeLimit = 3.0
+Cost = 14

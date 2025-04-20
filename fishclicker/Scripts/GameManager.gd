@@ -8,6 +8,8 @@ signal MoneyUpdate(amount)
 signal MoneyChanged(amount)
 
 signal BaitChanged(baitData)
+signal BaitAdded(baitName)
+
 signal XPGained
 
 var DefaultBait = load("res://Resources/Levels/Baits/000_BAIT_NONE.tres")
@@ -52,6 +54,7 @@ func _ready():
 	await get_tree().process_frame
 	AddMoney(0)
 	ChangeBait(DefaultBait)
+	
 func ChangeBait(baitData):
 	CurrentBait = baitData
 	BaitChanged.emit(baitData)
@@ -66,7 +69,9 @@ func AddBait(baitName, amount = 1):
 		GameData["BaitInventory"][baitName] += amount
 	else:
 		GameData["BaitInventory"][baitName] = amount
-
+	
+	BaitAdded.emit(baitName)
+	
 func AddCompletedChallenge(baitID):
 	GameData["BaitCompleted"][baitID] = 1
 	

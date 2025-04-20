@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BaitData" load_steps=11 format=3 uid="uid://bovv87bhgmams"]
+
+[ext_resource type="Texture2D" uid="uid://iubwaf5naw5d" path="res://Art/Sprites/Bait/BreadBait.png" id="1_nsc7x"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_g2exi"]
+[ext_resource type="Resource" uid="uid://d3j3qdcufqjc8" path="res://Resources/Levels/Fish/P035_Mullet.tres" id="3_0wky7"]
+[ext_resource type="Resource" uid="uid://bnkhhte5201o8" path="res://Resources/Levels/Fish/P036_Tinfoil_Barb.tres" id="3_wb4ml"]
+[ext_resource type="Resource" uid="uid://b6fswuw3rqk5l" path="res://Resources/Levels/Fish/P038_Gudgeon.tres" id="4_py37v"]
+[ext_resource type="Resource" uid="uid://cyvalxq66j755" path="res://Resources/Levels/Fish/P040_Dace.tres" id="5_axm0x"]
+[ext_resource type="Resource" uid="uid://bpoh265dyyh1n" path="res://Resources/Levels/Fish/P037_SilverCarp.tres" id="5_vjb1p"]
+[ext_resource type="Resource" uid="uid://c1iit33adst50" path="res://Resources/Levels/Fish/P041_Tench.tres" id="6_nsc7x"]
+[ext_resource type="Resource" uid="uid://5d7vooi453xf" path="res://Resources/Levels/Fish/P039_Rudd.tres" id="7_ka1ig"]
+[ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="10_x6kn3"]
+
+[resource]
+script = ExtResource("10_x6kn3")
+BaitName = "Bread Bait"
+BaitImage = ExtResource("1_nsc7x")
+BaitID = "005"
+Cost = 8
+CommonPool = Array[ExtResource("2_g2exi")]([ExtResource("3_wb4ml"), ExtResource("4_py37v"), ExtResource("5_axm0x"), ExtResource("6_nsc7x")])
+RarePool = Array[ExtResource("2_g2exi")]([ExtResource("3_0wky7"), ExtResource("5_vjb1p"), ExtResource("7_ka1ig")])
+LegendaryPool = Array[ExtResource("2_g2exi")]([])
+bIsInfinite = false
+metadata/_custom_type_script = "uid://bgc7uj0bli212"

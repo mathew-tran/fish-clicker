@@ -17,7 +17,7 @@
 script = ExtResource("6_poms2")
 BaitName = "Shrimp Bait"
 BaitImage = ExtResource("1_0fyk8")
-BaitID = "001"
+BaitID = "002"
 Cost = 3
 CommonPool = Array[ExtResource("2_txsd1")]([ExtResource("5_txsd1"), ExtResource("4_fs3ei"), ExtResource("5_0fyk8")])
 RarePool = Array[ExtResource("2_txsd1")]([ExtResource("6_txsd1"), ExtResource("7_vt8jv"), ExtResource("8_llca7")])

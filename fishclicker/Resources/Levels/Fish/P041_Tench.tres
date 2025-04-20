@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://c1iit33adst50"]
+
+[ext_resource type="Texture2D" uid="uid://bpl62ma0ax8us" path="res://Art/Sprites/Fish/Detail/Tench.png" id="1_v4meq"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_vtgos"]
+
+[resource]
+script = ExtResource("2_vtgos")
+FishImage = ExtResource("1_v4meq")
+FishName = "Tench"
+Rarity = 0
+FishSize = 1
+FishID = "P041"
+Tugs = 2
+TimeLimit = 3.0
+Cost = 8
