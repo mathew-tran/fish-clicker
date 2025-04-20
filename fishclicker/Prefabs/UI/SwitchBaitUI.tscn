@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bv8weh4v23eoo" path="res://Scripts/UI/SwitchBaitUI.gd" id="1_pck3f"]
 [ext_resource type="PackedScene" uid="uid://b5kb13544bb75" path="res://Prefabs/UI/BaitButton.tscn" id="2_3xxl1"]
-[ext_resource type="Resource" uid="uid://bb16lfrygisqc" path="res://Resources/Levels/Baits/BAIT_NONE.tres" id="3_ftqs6"]
-[ext_resource type="Resource" uid="uid://ct5utnv2aas06" path="res://Resources/Levels/Baits/BAIT_SHRIMP.tres" id="4_74xm8"]
-[ext_resource type="Resource" uid="uid://dqjbkslgu0x0u" path="res://Resources/Levels/Baits/BAIT_WORM.tres" id="5_74xm8"]
+[ext_resource type="Resource" uid="uid://bb16lfrygisqc" path="res://Resources/Levels/Baits/000_BAIT_NONE.tres" id="3_ftqs6"]
+[ext_resource type="Resource" uid="uid://ct5utnv2aas06" path="res://Resources/Levels/Baits/002_BAIT_SHRIMP.tres" id="4_74xm8"]
+[ext_resource type="Resource" uid="uid://dqjbkslgu0x0u" path="res://Resources/Levels/Baits/003_BAIT_WORM.tres" id="5_74xm8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vrtq"]
 bg_color = Color(0.0584206, 0.0584206, 0.0584206, 1)
@@ -43,12 +43,33 @@ offset_right = 10.5
 offset_bottom = 10.5
 grow_horizontal = 2
 grow_vertical = 2
+columns = 4
 
 [node name="BAITBUTTON-None" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
 layout_mode = 2
 OwnedBait = ExtResource("3_ftqs6")
 
 [node name="BAITBUTTON-Shrimp Bait" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
+layout_mode = 2
+OwnedBait = ExtResource("4_74xm8")
+
+[node name="BAITBUTTON-Shrimp Bait3" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
+layout_mode = 2
+OwnedBait = ExtResource("4_74xm8")
+
+[node name="BAITBUTTON-Shrimp Bait4" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
+layout_mode = 2
+OwnedBait = ExtResource("4_74xm8")
+
+[node name="BAITBUTTON-Shrimp Bait5" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
+layout_mode = 2
+OwnedBait = ExtResource("4_74xm8")
+
+[node name="BAITBUTTON-Shrimp Bait6" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
+layout_mode = 2
+OwnedBait = ExtResource("4_74xm8")
+
+[node name="BAITBUTTON-Shrimp Bait7" parent="Panel/GridContainer" instance=ExtResource("2_3xxl1")]
 layout_mode = 2
 OwnedBait = ExtResource("4_74xm8")
 

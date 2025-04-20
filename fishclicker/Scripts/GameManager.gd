@@ -10,7 +10,7 @@ signal MoneyChanged(amount)
 signal BaitChanged(baitData)
 signal XPGained
 
-var DefaultBait = load("res://Resources/Levels/Baits/BAIT_NONE.tres")
+var DefaultBait = load("res://Resources/Levels/Baits/000_BAIT_NONE.tres")
 var CurrentBait : BaitData
 
 var GameData = {

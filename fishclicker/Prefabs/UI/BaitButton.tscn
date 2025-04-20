@@ -42,6 +42,7 @@ scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 32
 text = "(0)"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="CannotAfford" type="Panel" parent="."]
 layout_mode = 0
@@ -62,5 +63,6 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 14
 text = "No Bait"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="button_up" from="." to="." method="_on_button_up"]

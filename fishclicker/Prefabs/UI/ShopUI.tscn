@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c31b1is8yq1ur" path="res://Prefabs/UI/PurchaseBaitButton.tscn" id="1_2qmjl"]
 [ext_resource type="Script" uid="uid://bqprsj31oy6lm" path="res://Scripts/UI/ShopUI.gd" id="1_dl2q2"]
-[ext_resource type="Resource" uid="uid://ct5utnv2aas06" path="res://Resources/Levels/Baits/BAIT_SHRIMP.tres" id="2_s3n5v"]
-[ext_resource type="Resource" uid="uid://dqjbkslgu0x0u" path="res://Resources/Levels/Baits/BAIT_WORM.tres" id="4_pvdtk"]
-[ext_resource type="Resource" uid="uid://df8uvxh36slnb" path="res://Resources/Levels/Baits/BAIT_CORN.tres" id="5_vlfwe"]
+[ext_resource type="Resource" uid="uid://ct5utnv2aas06" path="res://Resources/Levels/Baits/002_BAIT_SHRIMP.tres" id="2_s3n5v"]
+[ext_resource type="Resource" uid="uid://dqjbkslgu0x0u" path="res://Resources/Levels/Baits/003_BAIT_WORM.tres" id="4_pvdtk"]
+[ext_resource type="Resource" uid="uid://df8uvxh36slnb" path="res://Resources/Levels/Baits/004_BAIT_CORN.tres" id="5_vlfwe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qmjl"]
 bg_color = Color(0.0584206, 0.0584206, 0.0584206, 1)
@@ -42,8 +42,9 @@ offset_right = 10.5
 offset_bottom = 10.5
 grow_horizontal = 2
 grow_vertical = 2
+columns = 4
 
-[node name="BAIT-Shrimp Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Shrimp Bait4" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("2_s3n5v")
 FishingLevel = 1
@@ -52,7 +53,7 @@ FishingLevel = 1
 layout_mode = 2
 BaitToSell = ExtResource("4_pvdtk")
 
-[node name="BAIT-Worm Bait2" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Corn Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("5_vlfwe")
 

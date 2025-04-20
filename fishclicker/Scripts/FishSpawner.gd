@@ -33,7 +33,7 @@ func SpawnFish():
 	
 	var result = randi() % 100
 	if result <= 10:
-		var garbage = load("res://Resources/Levels/Baits/BAIT_GARBAGE.tres").GetRandomFish()
+		var garbage = load("res://Resources/Levels/Baits/001_BAIT_GARBAGE.tres").GetRandomFish()
 		fishInstance.Setup(garbage)
 	else:
 		fishInstance.Setup(Finder.GetGameManager().CurrentBait.GetRandomFish())
