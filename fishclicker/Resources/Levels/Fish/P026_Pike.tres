@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://c0r2wtpe4dsb1"]
 
-[ext_resource type="Texture2D" uid="uid://bk6spa30qmu2q" path="res://Art/Sprites/Fish/Detail/Chub.png" id="1_n5d64"]
+[ext_resource type="Texture2D" uid="uid://cx8oh16crikiq" path="res://Art/Sprites/Fish/Detail/Pike.png" id="1_1y188"]
 [ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_b7fqb"]
 
 [resource]
 script = ExtResource("2_b7fqb")
-FishImage = ExtResource("1_n5d64")
-FishName = "Chub"
+FishImage = ExtResource("1_1y188")
+FishName = "Pike"
 Rarity = 1
 FishSize = 2
-FishID = "P025"
+FishID = "P026"
 Tugs = 4
 TimeLimit = 2.0
 Cost = 15

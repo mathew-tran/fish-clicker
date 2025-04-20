@@ -95,9 +95,12 @@ func UseCurrentBait():
 		return
 	else:
 		RemoveBait(CurrentBait.BaitName, 1)
-		if GetBait(CurrentBait.BaitName) <= 0:
-			ChangeBait(DefaultBait)
-		ChangeBait(CurrentBait)
+		BaitChanged.emit(CurrentBait)
+	
+func CanUseCurrentBait():
+	if CurrentBait.bIsInfinite:
+		return true
+	return GetBait(CurrentBait.BaitName) > 0
 	
 func AddXP(amount):
 	ResidualAmount += amount

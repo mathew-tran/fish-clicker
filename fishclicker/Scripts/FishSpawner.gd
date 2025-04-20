@@ -18,6 +18,11 @@ func _on_timer_timeout():
 	SpawnFish()
 
 func SpawnFish():
+	
+	if Finder.GetGameManager().CanUseCurrentBait() == false:
+		$Timer.start()
+		return
+		
 	var Spawns = get_tree().get_nodes_in_group("SpawnMarker")
 	Spawns.shuffle()
 	
