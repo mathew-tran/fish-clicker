@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bbqc65mlt82ld"]
+
+[ext_resource type="Texture2D" uid="uid://ld7y8hq45vsb" path="res://Art/Sprites/Fish/Detail/Roach.png" id="1_gayef"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_i6842"]
+
+[resource]
+script = ExtResource("2_i6842")
+FishImage = ExtResource("1_gayef")
+FishName = "Roach"
+Rarity = 0
+FishSize = 1
+FishID = "P033"
+Tugs = 2
+TimeLimit = 3.0
+Cost = 10

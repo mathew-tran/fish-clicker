@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://uqlnlhmktfe7"]
+
+[ext_resource type="Texture2D" uid="uid://r8v4xruagkal" path="res://Art/Sprites/Fish/Detail/WhiteAmur.png" id="1_2r4bs"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_r1fsi"]
+
+[resource]
+script = ExtResource("2_r1fsi")
+FishImage = ExtResource("1_2r4bs")
+FishName = "White Amur"
+Rarity = 0
+FishSize = 1
+FishID = "P030"
+Tugs = 4
+TimeLimit = 5.0
+Cost = 18

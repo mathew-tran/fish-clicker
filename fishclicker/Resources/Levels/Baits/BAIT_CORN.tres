@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="BaitData" load_steps=11 format=3 uid="uid://df8uvxh36slnb"]
+
+[ext_resource type="Texture2D" uid="uid://b6vhfp0e74dkl" path="res://Art/Sprites/Bait/CornBait.png" id="1_mobhp"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="1_oulst"]
+[ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="2_mobhp"]
+[ext_resource type="Resource" uid="uid://duaet3ylf4hiq" path="res://Resources/Levels/Fish/P028_Tilapia.tres" id="3_ltd11"]
+[ext_resource type="Resource" uid="uid://v85wxdgdbo73" path="res://Resources/Levels/Fish/P029_Sunfish.tres" id="4_iqwq0"]
+[ext_resource type="Resource" uid="uid://uqlnlhmktfe7" path="res://Resources/Levels/Fish/P030_WhiteAmur.tres" id="4_pf7i4"]
+[ext_resource type="Resource" uid="uid://d01cgbkjodrxp" path="res://Resources/Levels/Fish/P031_BuffaloFish.tres" id="5_v8knp"]
+[ext_resource type="Resource" uid="uid://dpal5wb3cma13" path="res://Resources/Levels/Fish/P032_Shad.tres" id="6_jkwv0"]
+[ext_resource type="Resource" uid="uid://bbqc65mlt82ld" path="res://Resources/Levels/Fish/P033_Roach.tres" id="7_4d4qc"]
+[ext_resource type="Resource" uid="uid://bxmgsrplytiy" path="res://Resources/Levels/Fish/P034_Bream.tres" id="9_tlkon"]
+
+[resource]
+script = ExtResource("2_mobhp")
+BaitName = "Corn Bait"
+BaitImage = ExtResource("1_mobhp")
+BaitID = "000"
+Cost = 5
+CommonPool = Array[ExtResource("1_oulst")]([ExtResource("3_ltd11"), ExtResource("4_pf7i4"), ExtResource("5_v8knp"), ExtResource("6_jkwv0"), ExtResource("7_4d4qc")])
+RarePool = Array[ExtResource("1_oulst")]([ExtResource("9_tlkon")])
+LegendaryPool = Array[ExtResource("1_oulst")]([ExtResource("4_iqwq0")])
+bIsInfinite = false
+metadata/_custom_type_script = "uid://bgc7uj0bli212"

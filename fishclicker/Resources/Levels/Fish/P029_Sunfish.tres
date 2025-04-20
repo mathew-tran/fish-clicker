@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://v85wxdgdbo73"]
+
+[ext_resource type="Texture2D" uid="uid://8oopgk0q0bjs" path="res://Art/Sprites/Fish/Detail/Sunfish.png" id="1_t8ntm"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_incny"]
+
+[resource]
+script = ExtResource("2_incny")
+FishImage = ExtResource("1_t8ntm")
+FishName = "Sunfish"
+Rarity = 2
+FishSize = 2
+FishID = "P029"
+Tugs = 8
+TimeLimit = 5.0
+Cost = 40

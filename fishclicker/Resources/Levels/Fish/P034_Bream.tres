@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bxmgsrplytiy"]
+
+[ext_resource type="Texture2D" uid="uid://ld7y8hq45vsb" path="res://Art/Sprites/Fish/Detail/Roach.png" id="1_ijsq6"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_osvdf"]
+
+[resource]
+script = ExtResource("2_osvdf")
+FishImage = ExtResource("1_ijsq6")
+FishName = "Bream"
+Rarity = 0
+FishSize = 1
+FishID = "P034"
+Tugs = 5
+TimeLimit = 5.0
+Cost = 22

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://d01cgbkjodrxp"]
+
+[ext_resource type="Texture2D" uid="uid://n2hyhp5mk8bv" path="res://Art/Sprites/Fish/Detail/BuffaloFish.png" id="1_2uk4a"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_0senc"]
+
+[resource]
+script = ExtResource("2_0senc")
+FishImage = ExtResource("1_2uk4a")
+FishName = "BuffaloFish"
+Rarity = 0
+FishSize = 1
+FishID = "P031"
+Tugs = 5
+TimeLimit = 3.0
+Cost = 17

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://duaet3ylf4hiq"]
+
+[ext_resource type="Texture2D" uid="uid://w0cnnesspr7" path="res://Art/Sprites/Fish/Detail/Tilapia.png" id="1_wu03k"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_60mme"]
+
+[resource]
+script = ExtResource("2_60mme")
+FishImage = ExtResource("1_wu03k")
+FishName = "Tilapia"
+Rarity = 0
+FishSize = 1
+FishID = "P028"
+Tugs = 3
+TimeLimit = 2.0
+Cost = 14
