@@ -10,7 +10,7 @@ script = ExtResource("1_igdbl")
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(0, 130)
 offset_top = 31.0
-offset_right = 234.0
+offset_right = 224.0
 offset_bottom = 161.0
 horizontal_scroll_mode = 0
 
