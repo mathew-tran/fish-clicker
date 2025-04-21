@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="BaitData" load_steps=8 format=3 uid="uid://dioacelhhibm3"]
+
+[ext_resource type="Texture2D" uid="uid://dpf1sq2btiwwe" path="res://Art/Sprites/Bait/CricketBait.png" id="1_6ek8a"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_7qfh8"]
+[ext_resource type="Resource" uid="uid://brjyi7cos486a" path="res://Resources/Levels/Fish/P042_Walleye.tres" id="3_4bcvh"]
+[ext_resource type="Resource" uid="uid://drbki3y0ka5ym" path="res://Resources/Levels/Fish/P043_Largemouth_Bass.tres" id="4_lyoxf"]
+[ext_resource type="Resource" uid="uid://cb40j5liic87h" path="res://Resources/Levels/Fish/P044_Crucian_Carp.tres" id="5_n3kxx"]
+[ext_resource type="Resource" uid="uid://etu13u2p6i3i" path="res://Resources/Levels/Fish/P045_Brook_Trout.tres" id="6_g7dak"]
+[ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="10_iwtxi"]
+
+[resource]
+script = ExtResource("10_iwtxi")
+BaitName = "Cricket Bait"
+BaitImage = ExtResource("1_6ek8a")
+BaitID = "006"
+Cost = 6
+CommonPool = Array[ExtResource("2_7qfh8")]([ExtResource("3_4bcvh"), ExtResource("4_lyoxf"), ExtResource("5_n3kxx"), ExtResource("6_g7dak")])
+RarePool = Array[ExtResource("2_7qfh8")]([])
+LegendaryPool = Array[ExtResource("2_7qfh8")]([])
+bIsInfinite = false
+metadata/_custom_type_script = "uid://bgc7uj0bli212"

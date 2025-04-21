@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://cb40j5liic87h"]
+
+[ext_resource type="Texture2D" uid="uid://cjjcebejnn5va" path="res://Art/Sprites/Fish/Detail/CrucianCarp.png" id="1_op3gv"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_gvkhs"]
+
+[resource]
+script = ExtResource("2_gvkhs")
+FishImage = ExtResource("1_op3gv")
+FishName = "Crucian Carp"
+Rarity = 0
+FishSize = 1
+FishID = "P044"
+Tugs = 4
+TimeLimit = 2.0
+Cost = 12

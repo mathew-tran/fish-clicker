@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://drbki3y0ka5ym"]
+
+[ext_resource type="Texture2D" uid="uid://c6eqvurfix5wk" path="res://Art/Sprites/Fish/Detail/LargemouthBass.png" id="1_8efka"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_78stk"]
+
+[resource]
+script = ExtResource("2_78stk")
+FishImage = ExtResource("1_8efka")
+FishName = "Largemouth Bass"
+Rarity = 0
+FishSize = 1
+FishID = "P043"
+Tugs = 8
+TimeLimit = 2.0
+Cost = 16

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://etu13u2p6i3i"]
+
+[ext_resource type="Texture2D" uid="uid://b857us8fmf25y" path="res://Art/Sprites/Fish/Detail/BrookTrout.png" id="1_6m431"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_5wui6"]
+
+[resource]
+script = ExtResource("2_5wui6")
+FishImage = ExtResource("1_6m431")
+FishName = "Brook Trout"
+Rarity = 0
+FishSize = 1
+FishID = "P045"
+Tugs = 2
+TimeLimit = 0.5
+Cost = 10

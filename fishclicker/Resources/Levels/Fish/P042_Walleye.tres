@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://brjyi7cos486a"]
+
+[ext_resource type="Texture2D" uid="uid://n1bnh4p6e75a" path="res://Art/Sprites/Fish/Detail/Walleye.png" id="1_c21o7"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_kgcwg"]
+
+[resource]
+script = ExtResource("2_kgcwg")
+FishImage = ExtResource("1_c21o7")
+FishName = "Walleye"
+Rarity = 0
+FishSize = 1
+FishID = "P042"
+Tugs = 3
+TimeLimit = 1.5
+Cost = 12
