@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://csunpnhmpnxeu"]
+
+[ext_resource type="Script" uid="uid://d4deh6rviewnw" path="res://Scripts/UI/CollectionScreen.gd" id="1_igdbl"]
+
+[node name="CollectionScreen" type="Popup"]
+size = Vector2i(175, 161)
+visible = true
+script = ExtResource("1_igdbl")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(0, 130)
+offset_top = 31.0
+offset_right = 234.0
+offset_bottom = 161.0
+horizontal_scroll_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 7
+
+[node name="Label" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 102.0
+offset_bottom = 24.0
+text = "COLLECTION"
+
+[node name="CloseButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CompletePercentage" type="Label" parent="."]
+offset_left = 106.0
+offset_top = 1.0
+offset_right = 146.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 8
+text = "(92.85%)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="button_up" from="CloseButton" to="." method="_on_close_button_button_up"]

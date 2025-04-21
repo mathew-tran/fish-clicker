@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://ukg3yc775we2"]
+
+[ext_resource type="Texture2D" uid="uid://ckql2rliqupcr" path="res://Art/Sprites/Fish/Detail/StripedBass.png" id="1_x8tc3"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_lg7ru"]
+
+[resource]
+script = ExtResource("2_lg7ru")
+FishImage = ExtResource("1_x8tc3")
+FishName = "Striped Bass"
+Rarity = 0
+FishSize = 1
+FishID = "P047"
+Tugs = 5
+TimeLimit = 2.0
+Cost = 16

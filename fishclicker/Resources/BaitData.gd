@@ -31,3 +31,13 @@ func HasCompletedBait():
 
 func CompleteBait():
 	return Finder.GetGameManager().AddCompletedChallenge(BaitID)
+
+func GetAllFish():
+	var fishPool = []
+	for fish in CommonPool:
+		fishPool.append(fish)
+	for fish in RarePool:
+		fishPool.append(fish)
+	for fish in LegendaryPool:
+		fishPool.append(fish)
+	return fishPool

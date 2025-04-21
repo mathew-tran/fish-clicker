@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://cq8x3iqp1110g"]
+
+[ext_resource type="Texture2D" uid="uid://bgh61ikxpg3qj" path="res://Art/Sprites/Fish/Detail/RedearSunfish.png" id="1_i0lfp"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_1cxre"]
+
+[resource]
+script = ExtResource("2_1cxre")
+FishImage = ExtResource("1_i0lfp")
+FishName = "Redear Sunfish"
+Rarity = 0
+FishSize = 0
+FishID = "P050"
+Tugs = 4
+TimeLimit = 2.0
+Cost = 13

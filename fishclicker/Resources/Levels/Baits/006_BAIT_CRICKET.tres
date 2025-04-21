@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="BaitData" load_steps=10 format=3 uid="uid://dioacelhhibm3"]
+[gd_resource type="Resource" script_class="BaitData" load_steps=15 format=3 uid="uid://dioacelhhibm3"]
 
 [ext_resource type="Texture2D" uid="uid://dpf1sq2btiwwe" path="res://Art/Sprites/Bait/CricketBait.png" id="1_6ek8a"]
 [ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_7qfh8"]
@@ -7,8 +7,13 @@
 [ext_resource type="Resource" uid="uid://cb40j5liic87h" path="res://Resources/Levels/Fish/P044_Crucian_Carp.tres" id="5_n3kxx"]
 [ext_resource type="Resource" uid="uid://etu13u2p6i3i" path="res://Resources/Levels/Fish/P045_Brook_Trout.tres" id="6_g7dak"]
 [ext_resource type="Resource" uid="uid://c75qntjwjnxj1" path="res://Resources/Levels/Fish/P046_Northern_Pike.tres" id="7_abu4p"]
-[ext_resource type="Resource" uid="uid://y152o00cri0i" path="res://Resources/Levels/Fish/P047_Striped_Bass.tres" id="8_odaon"]
+[ext_resource type="Resource" uid="uid://y152o00cri0i" path="res://Resources/Levels/Fish/P048_Striped_Bass.tres" id="8_fglhf"]
+[ext_resource type="Resource" uid="uid://ukg3yc775we2" path="res://Resources/Levels/Fish/P047_Rock_Bass.tres" id="9_kiog6"]
 [ext_resource type="Script" uid="uid://bgc7uj0bli212" path="res://Resources/BaitData.gd" id="10_iwtxi"]
+[ext_resource type="Resource" uid="uid://cq8x3iqp1110g" path="res://Resources/Levels/Fish/P050_Redear_Sunfish.tres" id="10_kiog6"]
+[ext_resource type="Resource" uid="uid://5lsu5j7eaom2" path="res://Resources/Levels/Fish/P051_Pumpkin_Seed.tres" id="11_6u20r"]
+[ext_resource type="Resource" uid="uid://b3hrsbgebw1tc" path="res://Resources/Levels/Fish/P052_Bleak.tres" id="12_uv5su"]
+[ext_resource type="Resource" uid="uid://bwl13pdbvk1dy" path="res://Resources/Levels/Fish/P053_Snakehead.tres" id="13_d84vt"]
 
 [resource]
 script = ExtResource("10_iwtxi")
@@ -16,7 +21,7 @@ BaitName = "Cricket Bait"
 BaitImage = ExtResource("1_6ek8a")
 BaitID = "006"
 Cost = 6
-CommonPool = Array[ExtResource("2_7qfh8")]([ExtResource("3_4bcvh"), ExtResource("4_lyoxf"), ExtResource("5_n3kxx"), ExtResource("6_g7dak"), ExtResource("7_abu4p"), ExtResource("8_odaon")])
+CommonPool = Array[ExtResource("2_7qfh8")]([ExtResource("3_4bcvh"), ExtResource("4_lyoxf"), ExtResource("5_n3kxx"), ExtResource("6_g7dak"), ExtResource("7_abu4p"), ExtResource("8_fglhf"), ExtResource("9_kiog6"), ExtResource("10_kiog6"), ExtResource("11_6u20r"), ExtResource("12_uv5su"), ExtResource("13_d84vt")])
 RarePool = Array[ExtResource("2_7qfh8")]([])
 LegendaryPool = Array[ExtResource("2_7qfh8")]([])
 bIsInfinite = false

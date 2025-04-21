@@ -66,7 +66,7 @@ layout_mode = 2
 BaitToSell = ExtResource("6_v0bkr")
 FishingLevel = 15
 
-[node name="BAIT-Bread Bait2" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Cricket Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("7_vrx5y")
 FishingLevel = 20

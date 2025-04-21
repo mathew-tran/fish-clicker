@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://bwl13pdbvk1dy"]
+
+[ext_resource type="Texture2D" uid="uid://c1sg58yb74jyp" path="res://Art/Sprites/Fish/Detail/Snakehead.png" id="1_mrget"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_ixxmt"]
+
+[resource]
+script = ExtResource("2_ixxmt")
+FishImage = ExtResource("1_mrget")
+FishName = "Snakehead"
+Rarity = 0
+FishSize = 1
+FishID = "P053"
+Tugs = 4
+TimeLimit = 3.0
+Cost = 16

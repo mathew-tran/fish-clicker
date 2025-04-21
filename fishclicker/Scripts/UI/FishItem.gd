@@ -2,6 +2,10 @@ extends Control
 
 var FishDataRef : FishData
 
+func Update():
+	if FishDataRef:
+		Setup(FishDataRef)
+		
 func Setup(fishData : FishData):
 	FishDataRef = fishData
 	$Image.modulate = Color.BLACK
@@ -22,3 +26,5 @@ func Setup(fishData : FishData):
 		$Image.modulate = Color.WHITE
 		$Label.text = fishData.FishName
 	
+func IsCaught():
+	return $Label.text != "???"

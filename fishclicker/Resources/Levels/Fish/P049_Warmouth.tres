@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://dp40bgkaxehju"]
+
+[ext_resource type="Texture2D" uid="uid://bg4nns066n7ix" path="res://Art/Sprites/Fish/Detail/Warmouth.png" id="1_i0v78"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_upsj6"]
+
+[resource]
+script = ExtResource("2_upsj6")
+FishImage = ExtResource("1_i0v78")
+FishName = "Warmouth"
+Rarity = 0
+FishSize = 1
+FishID = "P049"
+Tugs = 6
+TimeLimit = 2.0
+Cost = 16

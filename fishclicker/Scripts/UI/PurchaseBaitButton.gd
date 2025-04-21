@@ -22,7 +22,6 @@ func Update():
 	var amount = Finder.GetGameManager().GetBait(BaitToSell.BaitName)
 	$Owned.text = "(" + str(amount) + ")"
 	disabled = CanAfford() == false or Finder.GetGameManager().GetLevel() < FishingLevel
-
 	if Finder.GetGameManager().GetLevel() < FishingLevel:
 		$CannotAfford/Label.text = "Unlock on Fishing Level: " + str(FishingLevel) 
 	elif CanAfford() == false:

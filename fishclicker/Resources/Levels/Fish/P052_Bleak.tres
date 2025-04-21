@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FishData" load_steps=3 format=3 uid="uid://b3hrsbgebw1tc"]
+
+[ext_resource type="Texture2D" uid="uid://bfgjcynoyv8ks" path="res://Art/Sprites/Fish/Detail/Bleak.png" id="1_syi5v"]
+[ext_resource type="Script" uid="uid://clf4q2sgy5gad" path="res://Resources/FishData.gd" id="2_ob5y4"]
+
+[resource]
+script = ExtResource("2_ob5y4")
+FishImage = ExtResource("1_syi5v")
+FishName = "Bleak"
+Rarity = 0
+FishSize = 0
+FishID = "P052"
+Tugs = 1
+TimeLimit = 0.5
+Cost = 13
