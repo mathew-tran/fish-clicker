@@ -34,6 +34,7 @@ func _on_button_up() -> void:
 		Finder.GetGameManager().AddBait(BaitToSell.BaitName, 1)
 		Finder.GetGameManager().RemoveMoney(BaitToSell.Cost)
 		Update()
+		Finder.GetGameManager().AddXP(1)
 		
 func CanAfford():
 	return Finder.GetGameManager().CanAfford(BaitToSell.Cost)

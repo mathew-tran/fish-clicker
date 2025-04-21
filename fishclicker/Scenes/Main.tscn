@@ -72,8 +72,8 @@ layer_0/tile_data = PackedInt32Array(0, 262145, 1, 65536, 262145, 1, 131072, 262
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_bmxlf")
-position = Vector2(117, 78.5)
-scale = Vector2(7.5, 4.84375)
+position = Vector2(118, 79.5)
+scale = Vector2(7.5625, 4.90625)
 texture = ExtResource("8_vy5pj")
 metadata/_edit_lock_ = true
 
