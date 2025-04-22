@@ -2,6 +2,9 @@ extends Sprite2D
 
 var FishRef = null
 
+func Equip(rodData : RodData):
+	texture = rodData.RodTexture
+	
 func _ready() -> void:
 	Finder.GetGameManager().BaitChanged.connect(OnBaitChanged)
 	Finder.GetGameManager().BaitAdded.connect(OnBaitAdded)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RodData" load_steps=3 format=3 uid="uid://bru7q5t5c8o1i"]
+
+[ext_resource type="Texture2D" uid="uid://bwk7csxhvihe5" path="res://Art/Sprites/Rod-Red.png" id="1_4puxw"]
+[ext_resource type="Script" uid="uid://kymhv3gnisch" path="res://Resources/RodData.gd" id="2_l0x82"]
+
+[resource]
+script = ExtResource("2_l0x82")
+RodName = "Amateur"
+RodTexture = ExtResource("1_4puxw")
+RodID = "003"
+Cost = 3000
+metadata/_custom_type_script = "uid://kymhv3gnisch"

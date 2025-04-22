@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbbrrgy5kln12"]
+[gd_scene load_steps=15 format=3 uid="uid://bbbrrgy5kln12"]
 
 [ext_resource type="PackedScene" uid="uid://c31b1is8yq1ur" path="res://Prefabs/UI/PurchaseBaitButton.tscn" id="1_2qmjl"]
 [ext_resource type="Script" uid="uid://bqprsj31oy6lm" path="res://Scripts/UI/ShopUI.gd" id="1_dl2q2"]
@@ -7,6 +7,12 @@
 [ext_resource type="Resource" uid="uid://df8uvxh36slnb" path="res://Resources/Levels/Baits/004_BAIT_CORN.tres" id="5_vlfwe"]
 [ext_resource type="Resource" uid="uid://bovv87bhgmams" path="res://Resources/Levels/Baits/005_BAIT_BREAD.tres" id="6_v0bkr"]
 [ext_resource type="Resource" uid="uid://dioacelhhibm3" path="res://Resources/Levels/Baits/006_BAIT_CRICKET.tres" id="7_vrx5y"]
+[ext_resource type="PackedScene" uid="uid://d022rjnxkon8m" path="res://Prefabs/UI/PurchaseRodButton.tscn" id="8_a2444"]
+[ext_resource type="Resource" uid="uid://c7r0an5rwru4c" path="res://Resources/Levels/Rods/R001_Rod_Basic.tres" id="9_drgne"]
+[ext_resource type="Resource" uid="uid://ngclijcbkoaj" path="res://Resources/Levels/Rods/R002_Rod_Starter.tres" id="10_qxs3m"]
+[ext_resource type="Resource" uid="uid://bru7q5t5c8o1i" path="res://Resources/Levels/Rods/R003_Rod_Red.tres" id="11_6i33r"]
+[ext_resource type="Resource" uid="uid://bl7j8671c4411" path="res://Resources/Levels/Rods/R005_Rod_Stick.tres" id="11_7jp2s"]
+[ext_resource type="Resource" uid="uid://c2s36fly6v3o4" path="res://Resources/Levels/Rods/R004_Rod_Pro.tres" id="12_7jp2s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qmjl"]
 bg_color = Color(0.0584206, 0.0584206, 0.0584206, 1)
@@ -34,44 +40,102 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2qmjl")
 
-[node name="GridContainer" type="GridContainer" parent="Panel"]
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 178.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 9
+tab_alignment = 1
+current_tab = 1
+
+[node name="Bait" type="Panel" parent="Panel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Container" type="GridContainer" parent="Panel/TabContainer/Bait"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -10.5
-offset_top = -10.5
-offset_right = 10.5
-offset_bottom = 10.5
+offset_left = -46.0
+offset_top = -22.0
+offset_right = 46.0
+offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
-[node name="BAIT-Shrimp Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Shrimp Bait" parent="Panel/TabContainer/Bait/Container" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("2_s3n5v")
 FishingLevel = 1
 
-[node name="BAIT-Worm Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Worm Bait" parent="Panel/TabContainer/Bait/Container" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("4_pvdtk")
 FishingLevel = 5
 
-[node name="BAIT-Corn Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Corn Bait" parent="Panel/TabContainer/Bait/Container" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("5_vlfwe")
 FishingLevel = 10
 
-[node name="BAIT-Bread Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Bread Bait" parent="Panel/TabContainer/Bait/Container" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("6_v0bkr")
 FishingLevel = 15
 
-[node name="BAIT-Cricket Bait" parent="Panel/GridContainer" instance=ExtResource("1_2qmjl")]
+[node name="BAIT-Cricket Bait" parent="Panel/TabContainer/Bait/Container" instance=ExtResource("1_2qmjl")]
 layout_mode = 2
 BaitToSell = ExtResource("7_vrx5y")
 FishingLevel = 20
+
+[node name="Rods" type="Panel" parent="Panel/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Container" type="GridContainer" parent="Panel/TabContainer/Rods"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -22.0
+offset_right = 46.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Rod" parent="Panel/TabContainer/Rods/Container" instance=ExtResource("8_a2444")]
+layout_mode = 2
+RodToSell = ExtResource("9_drgne")
+
+[node name="Rod2" parent="Panel/TabContainer/Rods/Container" instance=ExtResource("8_a2444")]
+layout_mode = 2
+RodToSell = ExtResource("10_qxs3m")
+FishingLevel = 5
+
+[node name="Rod5" parent="Panel/TabContainer/Rods/Container" instance=ExtResource("8_a2444")]
+layout_mode = 2
+RodToSell = ExtResource("11_7jp2s")
+FishingLevel = 8
+
+[node name="Rod3" parent="Panel/TabContainer/Rods/Container" instance=ExtResource("8_a2444")]
+layout_mode = 2
+RodToSell = ExtResource("11_6i33r")
+FishingLevel = 20
+
+[node name="Rod4" parent="Panel/TabContainer/Rods/Container" instance=ExtResource("8_a2444")]
+layout_mode = 2
+RodToSell = ExtResource("12_7jp2s")
+FishingLevel = 30
 
 [connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]

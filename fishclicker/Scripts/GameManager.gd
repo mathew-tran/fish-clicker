@@ -73,6 +73,9 @@ func LoadData():
 		"XP" : 0,
 		"Level" : 0
 	}
+	data["Rod"] = {
+		"001" : 1
+	}
 	return data
 	
 func ClearData():
@@ -102,6 +105,14 @@ func AddCompletedChallenge(baitID):
 	
 func HasCompletedChallenge(baitID):
 	return GameData["BaitCompleted"].has(baitID)
+
+func AddRod(rodID):
+	GameData["Rod"][rodID] = 1
+	
+func HasRod(rodID):
+	if GameData.has("Rod"):
+		return GameData["Rod"].has(rodID)
+	return false
 	
 func AddFish(fishData : FishData):
 	if GameData["FishCaught"].has(fishData.FishID):
@@ -112,6 +123,7 @@ func AddFish(fishData : FishData):
 		Finder.GetUnlockText().AddText(textToSay, 1.0)
 		AddXP(30)
 		
+
 
 func HasCaughtFish(fishID):
 	return GameData["FishCaught"].has(fishID)

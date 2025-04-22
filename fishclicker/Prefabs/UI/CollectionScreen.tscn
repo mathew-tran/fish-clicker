@@ -10,7 +10,7 @@ bg_color = Color(0, 0, 0, 1)
 [node name="CollectionScreen" type="Popup"]
 title = "COLLECTION"
 position = Vector2i(0, 36)
-size = Vector2i(191, 108)
+size = Vector2i(200, 110)
 visible = true
 borderless = false
 theme = SubResource("Theme_igdbl")

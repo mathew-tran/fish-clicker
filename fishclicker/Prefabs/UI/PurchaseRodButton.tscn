@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://d022rjnxkon8m"]
+
+[ext_resource type="Script" uid="uid://b1bknp0axq0qr" path="res://Scripts/UI/PurchaseRodButton.gd" id="1_o8207"]
+[ext_resource type="Texture2D" uid="uid://d07cgpr0enos" path="res://Art/Sprites/Bait/NoneBait.png" id="3_j3isq"]
+[ext_resource type="Texture2D" uid="uid://b2xdh1xgrnr8j" path="res://Art/Ui/Money.png" id="4_r0ugv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuaqq"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 0.878431)
+
+[node name="Rod" type="Button"]
+custom_minimum_size = Vector2(20, 32)
+offset_right = 21.0
+offset_bottom = 31.0
+script = ExtResource("1_o8207")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 155.0
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "None"
+horizontal_alignment = 1
+
+[node name="Image" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_j3isq")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Currencyimage" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_r0ugv")
+stretch_mode = 5
+
+[node name="Amount" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "0"
+
+[node name="CannotAfford" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 105.0
+offset_bottom = 155.0
+scale = Vector2(0.2, 0.2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xuaqq")
+
+[node name="Label" type="Label" parent="CannotAfford"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+text = "cannot afford"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Owned" type="Label" parent="."]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+offset_left = 1.0
+offset_top = 27.0
+offset_right = 191.0
+offset_bottom = 62.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 25
+text = "Owned"
+horizontal_alignment = 1
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
