@@ -15,7 +15,7 @@ func Setup():
 	
 	
 func Update():
-	var amount = Finder.GetGameManager().GetBait(OwnedBait.BaitName)
+	var amount = int(Finder.GetGameManager().GetBait(OwnedBait.BaitName))
 	
 	disabled = HasBait() == false
 	$CannotAfford.visible = disabled 

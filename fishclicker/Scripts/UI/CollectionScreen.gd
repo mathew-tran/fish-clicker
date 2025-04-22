@@ -1,8 +1,8 @@
 extends Popup
 
 
-@onready var FishItemContainer = $ScrollContainer/GridContainer
-
+@onready var FishItemContainer = $Panel/ScrollContainer/GridContainer
+@onready var CompleteText = $Panel/CompletePercentage
 var BaitPath = "res://Resources/Levels/Baits/"
 func _ready() -> void:
 	for child in FishItemContainer.get_children():
@@ -26,7 +26,7 @@ func _on_about_to_popup() -> void:
 		if child.IsCaught():
 			caught += 1
 	var completePercent = (float(caught) / float(total)) * 100.0
-	$CompletePercentage.text = str(snappedf(completePercent, .01)) + "%"
+	CompleteText.text = str(snappedf(completePercent, .01)) + "%"
 	
 func _on_close_button_button_up() -> void:
 	visible = false

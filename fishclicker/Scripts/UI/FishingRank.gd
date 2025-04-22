@@ -7,6 +7,6 @@ func _ready() -> void:
 func OnXPGained(amount):
 	$ProgressBar.value = Finder.GetGameManager().GetXP()
 	$ProgressBar.max_value = Finder.GetGameManager().MaxXP
-	$ProgressBar/Label.text = "" + str(Finder.GetGameManager().GetLevel())
+	$ProgressBar/Label.text = "" + str(int(Finder.GetGameManager().GetLevel()))
 	$AnimationPlayer.stop()
 	$AnimationPlayer.play("anim")

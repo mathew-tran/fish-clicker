@@ -16,11 +16,11 @@ func Setup(bait : BaitData):
 	$Container/Image.texture = bait.BaitImage
 	$Container/Owned.modulate = Color.WHITE
 	if bait.bIsInfinite == false:
-		var amount = Finder.GetGameManager().GetBait(bait.BaitName)
+		var amount = int(Finder.GetGameManager().GetBait(bait.BaitName))
 		$Container/Owned.text = "(" + str(amount) + ")"
 		if amount == 0:
 			$Container/Owned.modulate = Color.RED
-			$Container/Owned.text = "No Bait Left"
+			$Container/Owned.text = "NO BAIT"
 	else:
 		$Container/Owned.text = "(∞)" 
 		$Container/Owned.modulate = Color.AQUA

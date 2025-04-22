@@ -1,43 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://csunpnhmpnxeu"]
+[gd_scene load_steps=4 format=3 uid="uid://csunpnhmpnxeu"]
 
 [ext_resource type="Script" uid="uid://d4deh6rviewnw" path="res://Scripts/UI/CollectionScreen.gd" id="1_igdbl"]
 
+[sub_resource type="Theme" id="Theme_igdbl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igdbl"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="CollectionScreen" type="Popup"]
-size = Vector2i(175, 161)
+title = "COLLECTION"
+position = Vector2i(0, 36)
+size = Vector2i(191, 108)
 visible = true
+borderless = false
+theme = SubResource("Theme_igdbl")
 script = ExtResource("1_igdbl")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-custom_minimum_size = Vector2(0, 130)
-offset_top = 31.0
+[node name="Panel2" type="Panel" parent="."]
+offset_top = -1.0
+offset_right = 205.0
+offset_bottom = 110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_igdbl")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(180, 100)
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 110.0
+scale = Vector2(0.85, 0.85)
+metadata/_edit_group_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+offset_top = 17.0
 offset_right = 224.0
-offset_bottom = 161.0
+offset_bottom = 122.0
+scale = Vector2(0.8, 0.8)
 horizontal_scroll_mode = 0
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+[node name="GridContainer" type="GridContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
 columns = 7
 
-[node name="Label" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 1.0
-offset_right = 102.0
-offset_bottom = 24.0
-text = "COLLECTION"
-
-[node name="CloseButton" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-
-[node name="CompletePercentage" type="Label" parent="."]
-offset_left = 106.0
-offset_top = 1.0
-offset_right = 146.0
-offset_bottom = 24.0
+[node name="CompletePercentage" type="Label" parent="Panel"]
+offset_left = 69.0
+offset_top = -3.0
+offset_right = 109.0
+offset_bottom = 20.0
 theme_override_font_sizes/font_size = 8
 text = "(92.85%)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
-[connection signal="button_up" from="CloseButton" to="." method="_on_close_button_button_up"]

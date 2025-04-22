@@ -5,6 +5,11 @@ var CurrentAmount = -1
 func _ready():
 	Finder.GetGameManager().MoneyUpdate.connect(OnMoneyUpdate)
 	Finder.GetGameManager().MoneyChanged.connect(OnMoneyChanged)
+	ForceUpdate()
+func ForceUpdate():
+	var amount = Finder.GetGameManager().GetMoney()
+	TargetAmount = amount
+	CurrentAmount = amount - 1
 func OnMoneyUpdate(amount):
 	$AnimationPlayer.stop()
 	TargetAmount = amount
@@ -38,4 +43,4 @@ func _on_timer_timeout() -> void:
 			CurrentAmount += diff
 		elif TargetAmount < CurrentAmount:
 			CurrentAmount -= diff
-		$Label.text = str(CurrentAmount)
+		$Label.text = str(int(CurrentAmount))

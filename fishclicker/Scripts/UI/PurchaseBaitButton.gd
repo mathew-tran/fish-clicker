@@ -19,7 +19,7 @@ func Setup():
 	
 	
 func Update():
-	var amount = Finder.GetGameManager().GetBait(BaitToSell.BaitName)
+	var amount = int(Finder.GetGameManager().GetBait(BaitToSell.BaitName))
 	$Owned.text = "(" + str(amount) + ")"
 	disabled = CanAfford() == false or Finder.GetGameManager().GetLevel() < FishingLevel
 	if Finder.GetGameManager().GetLevel() < FishingLevel:

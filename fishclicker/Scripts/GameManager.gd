@@ -15,6 +15,8 @@ signal XPGained
 var DefaultBait = load("res://Resources/Levels/Baits/000_BAIT_NONE.tres")
 var CurrentBait : BaitData
 
+var SaveFile = "user://savegame.save"
+
 var GameData = {
 	
 }
@@ -34,26 +36,49 @@ func _ready():
 	
 	XPTimer.timeout.connect(OnXPTimerTimeout)
 	XPTimer.start()
-	
-	GameData["Money"] = 0
-	GameData["BaitInventory"] = {
-		
-	}
-	GameData["FishCaught"] = {
-		
-	}
-	GameData["BaitCompleted"] = {
-		
-	}
-	GameData["Rank"] = {
-		"XP" : 0,
-		"Level" : 0
-	}
-	XPGained.emit(0)
+	GameData = LoadData()
+
+
 	
 	await get_tree().process_frame
 	AddMoney(0)
+	XPGained.emit(0)
 	ChangeBait(DefaultBait)
+	
+func SaveData():
+	var file = FileAccess.open(SaveFile, FileAccess.WRITE)
+	file.store_string(JSON.stringify(GameData))
+	file.close()
+
+func LoadData():
+	if FileAccess.file_exists(SaveFile):
+		var file = FileAccess.open(SaveFile, FileAccess.READ)
+		var result = JSON.parse_string(file.get_as_text())
+		file.close()
+		if result != null:
+			return result
+			
+	var data = {}
+	data["Money"] = 0
+	data["BaitInventory"] = {
+		
+	}
+	data["FishCaught"] = {
+		
+	}
+	data["BaitCompleted"] = {
+		
+	}
+	data["Rank"] = {
+		"XP" : 0,
+		"Level" : 0
+	}
+	return data
+	
+func ClearData():
+	if FileAccess.file_exists(SaveFile):
+		DirAccess.remove_absolute(SaveFile)
+	get_tree().reload_current_scene()
 	
 func ChangeBait(baitData):
 	CurrentBait = baitData
@@ -135,6 +160,10 @@ func OnXPTimerTimeout():
 		GameData["Rank"]["XP"] = 0
 		GameData["Rank"]["Level"] += 1
 	XPGained.emit(rate)
+	
+	if ResidualAmount == 0:
+		SaveData()
+		print("save")
 	
 func GetXP():
 	return GameData["Rank"]["XP"]

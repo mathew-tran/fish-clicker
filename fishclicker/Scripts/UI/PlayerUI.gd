@@ -6,7 +6,8 @@ enum STATE {
 	DEFAULT,
 	SHOP,
 	BAIT,
-	COLLECTION
+	COLLECTION,
+	OPTIONS
 }
 var MainUIs = [
 ]
@@ -15,7 +16,8 @@ func _ready() -> void:
 	MainUIs = [
 		$ShopUI,
 		$SwitchBaitUI,
-		$CollectionScreen
+		$CollectionScreen,
+		$OptionsUI
 	]
 	
 	Finder.GetGameManager().BaitChanged.connect(OnBaitChanged)
@@ -34,6 +36,8 @@ func UpdateUI(state : STATE):
 			$SwitchBaitUI.popup_centered()
 		STATE.COLLECTION:
 			$CollectionScreen.popup_centered()
+		STATE.OPTIONS:
+			$OptionsUI.popup_centered()
 
 func CloseUI():
 	for ui in MainUIs:
