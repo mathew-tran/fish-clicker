@@ -1,11 +1,16 @@
 extends Sprite2D
 
-var FishRef = null
+class_name FishingRod
 
+var FishRef = null
+var RodRef : RodData	
+	
 func Equip(rodData : RodData):
 	texture = rodData.RodTexture
+	RodRef = rodData
 	
 func _ready() -> void:
+	Equip(load("res://Resources/Levels/Rods/R001_Rod_Basic.tres"))
 	Finder.GetGameManager().BaitChanged.connect(OnBaitChanged)
 	Finder.GetGameManager().BaitAdded.connect(OnBaitAdded)
 	$AnimationPlayer2.play("baitanim")

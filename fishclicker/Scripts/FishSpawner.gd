@@ -6,11 +6,12 @@ class_name FishSpawner
 
 signal FishBite
 func _ready():
+	await get_tree().process_frame
 	DetermineTime()
 
 	
 func DetermineTime():
-	#$Timer.wait_time = randf_range(12, 45)
+	$Timer.wait_time = Finder.GetFishingRod().RodRef.DetermineWaitTime()
 	$Timer.start()
 	print("Spawning Fish")
 

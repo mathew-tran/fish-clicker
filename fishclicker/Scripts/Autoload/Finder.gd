@@ -12,6 +12,9 @@ func GetEffectsGroup():
 func GetUnlockText() -> UnlockText:
 	return get_tree().get_nodes_in_group("UnlockText")[0]
 
+func GetFishingRod() -> FishingRod:
+	return get_tree().get_nodes_in_group("FishingRod")[0]
+	
 func GetFilesFromDirectory(path):
 	var dir = DirAccess.open(path)
 	var files = []

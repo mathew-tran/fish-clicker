@@ -9,4 +9,6 @@ RodName = "Amateur"
 RodTexture = ExtResource("1_4puxw")
 RodID = "003"
 Cost = 3000
+MinRange = 12
+MaxRange = 40
 metadata/_custom_type_script = "uid://kymhv3gnisch"

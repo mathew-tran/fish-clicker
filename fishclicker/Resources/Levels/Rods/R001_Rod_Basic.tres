@@ -9,4 +9,6 @@ RodName = "Basic"
 RodTexture = ExtResource("1_mfysx")
 RodID = "001"
 Cost = 0
+MinRange = 12
+MaxRange = 50
 metadata/_custom_type_script = "uid://kymhv3gnisch"

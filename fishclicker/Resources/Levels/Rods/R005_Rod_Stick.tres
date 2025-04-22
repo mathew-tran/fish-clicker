@@ -9,4 +9,6 @@ RodName = "Stick"
 RodTexture = ExtResource("1_syawn")
 RodID = "005"
 Cost = 500
+MinRange = 20
+MaxRange = 32
 metadata/_custom_type_script = "uid://kymhv3gnisch"

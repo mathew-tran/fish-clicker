@@ -44,7 +44,7 @@ func _on_button_up() -> void:
 		Finder.GetGameManager().AddXP(30)
 	
 	if OwnsRod():
-		get_tree().get_nodes_in_group("FishingRod")[0].Equip(RodToSell)
+		Finder.GetFishingRod().Equip(RodToSell)
 		
 func OwnsRod():
 	return Finder.GetGameManager().HasRod(RodToSell.RodID)

@@ -47,7 +47,7 @@ func _on_area_2d_button_up():
 	match CurrentState:
 		STATE.WAITING:
 			CurrentState = STATE.FIGHTING
-			get_tree().get_nodes_in_group("FishingRod")[0].AttachToFish(self)
+			Finder.GetFishingRod().AttachToFish(self)
 			$Activity.visible = false
 			$SplashAnim.visible = true
 			$SplashAnim.Play()

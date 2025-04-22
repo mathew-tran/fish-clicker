@@ -9,4 +9,6 @@ RodName = "Pro"
 RodTexture = ExtResource("1_vlrcf")
 RodID = "004"
 Cost = 8000
+MinRange = 10
+MaxRange = 36
 metadata/_custom_type_script = "uid://kymhv3gnisch"
